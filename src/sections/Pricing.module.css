@@ -1,0 +1,201 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+/* ── Card base ── */
+.card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--c-accent-ring);
+  box-shadow: var(--sh-md);
+  transform: translateY(-3px);
+}
+
+/* ── Featured card ── */
+.cardFeatured {
+  border-color: var(--c-accent);
+  box-shadow: 0 0 0 1px var(--c-accent), var(--sh-md);
+}
+
+.cardFeatured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px var(--c-accent), var(--sh-lg);
+}
+
+.featuredRibbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--c-accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 1.1rem 0.3rem 1.6rem;
+  border-bottom-left-radius: var(--r-md);
+  clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* ── Wide card (test day) ── */
+.cardWide {
+  grid-column: 1 / -1;
+  /* stays column layout — just full width */
+}
+
+/* ── Card inner structure ── */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.planIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-md);
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border-dark);
+  color: var(--c-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.planIconAccent {
+  background: var(--c-accent-bg);
+  border-color: var(--c-accent-ring);
+  color: var(--c-accent);
+}
+
+.planLabel {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.priceTag {
+  font-family: var(--f-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-muted);
+  line-height: 1;
+}
+
+.priceTagAccent {
+  color: var(--c-accent);
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: var(--c-muted);
+  line-height: 1.7;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.87rem;
+  color: var(--c-ink-2);
+}
+
+.featureTick {
+  color: var(--c-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+/* ── Cancellation policy ── */
+.policy {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-accent);
+  border-radius: var(--r-md);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.policyIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-md);
+  background: var(--c-accent-bg);
+  border: 1px solid var(--c-accent-ring);
+  color: var(--c-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.policyTitle {
+  font-family: var(--f-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-ink);
+  margin-bottom: 0.4rem;
+}
+
+.policyText {
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  line-height: 1.7;
+}
+
+.policyText strong {
+  color: var(--c-ink-2);
+  font-weight: 700;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardWide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

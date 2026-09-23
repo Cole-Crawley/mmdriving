@@ -1,0 +1,91 @@
+.banner {
+  background: var(--c-accent);
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(56px, 8vw, 88px);
+}
+
+.bgShape {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 75% 50%, rgba(255,255,255,0.1) 0%, transparent 60%),
+                    radial-gradient(circle at 20% 80%, rgba(0,0,0,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.heading {
+  font-family: var(--f-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+  line-height: 1.15;
+}
+
+.sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.82);
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* Override btn colours inside navy banner */
+.actions .btn--primary {
+  background: var(--c-amber);
+  color: #1a1814;
+  border-color: var(--c-amber);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.actions .btn--primary:hover {
+  background: #d9a316;
+  border-color: #d9a316;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+}
+
+.callBtn {
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.45) !important;
+}
+
+.callBtn:hover {
+  background: rgba(255,255,255,0.12) !important;
+  border-color: rgba(255,255,255,0.8) !important;
+  color: #fff !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .sub { margin-inline: auto; }
+  .actions {
+    justify-content: center;
+  }
+}

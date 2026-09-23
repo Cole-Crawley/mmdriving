@@ -1,0 +1,37 @@
+.bar {
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding-block: 1rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-ink-2);
+  white-space: nowrap;
+}
+
+.icon {
+  color: var(--c-accent);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    justify-content: flex-start;
+    gap: 0.5rem 1.5rem;
+  }
+}

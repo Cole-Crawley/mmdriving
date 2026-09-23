@@ -1,0 +1,194 @@
+/* ── Layout ── */
+.inner {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+/* ── SVG panel ── */
+.svgPanel {
+  background: linear-gradient(160deg, #1c3a6b 0%, #0f2440 55%, #091725 100%);
+  border-radius: var(--r-xl);
+  padding: 2.25rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle corner glows */
+.svgPanel::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240,180,41,0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+.svgPanel::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── SVG sizing ── */
+.routeSvg {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Route line animation ── */
+.routeLine {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 760;
+  animation: drawRoute 2.2s 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-play-state: paused;
+}
+
+/* Trigger animation once panel is revealed */
+.svgPanel:global(.visible) .routeLine {
+  animation-play-state: running;
+}
+
+@keyframes drawRoute {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Start pin pulse ── */
+.pulseRing {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulseRing 2.6s 1s ease-out infinite;
+  animation-play-state: paused;
+}
+
+.svgPanel:global(.visible) .pulseRing {
+  animation-play-state: running;
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1);   opacity: 0.4; }
+  70%  { transform: scale(2);   opacity: 0;   }
+  100% { transform: scale(2);   opacity: 0;   }
+}
+
+/* ── Route caption ── */
+.routeCaption {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Content side ── */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: var(--f-display);
+  font-size: clamp(1.85rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--c-ink);
+  margin-bottom: 1.1rem;
+  line-height: 1.12;
+}
+
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: var(--c-ink-2);
+  margin-bottom: 0.85rem;
+}
+
+.intro em {
+  font-style: italic;
+  color: var(--c-accent);
+}
+
+.body {
+  font-size: 0.97rem;
+  line-height: 1.78;
+  color: var(--c-muted);
+  margin-bottom: 0.85rem;
+}
+
+.body strong {
+  color: var(--c-ink-2);
+  font-weight: 700;
+}
+
+/* ── Credential checklist ── */
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.credItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--c-ink-2);
+  font-weight: 500;
+}
+
+.tick {
+  color: var(--c-amber);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.cta {
+  margin-top: 1.85rem;
+  align-self: flex-start;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .svgPanel {
+    max-width: 420px;
+  }
+  .routeSvg {
+    max-width: 200px;
+  }
+  .cta {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .svgPanel {
+    padding: 1.75rem 1.25rem 1.25rem;
+  }
+  .routeSvg {
+    max-width: 180px;
+  }
+}
