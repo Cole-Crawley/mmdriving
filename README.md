@@ -21,7 +21,7 @@ A nervous learner, or their parent, needs to trust an instructor before they'll 
 
 ## What I built
 
-- **One page, in the order a learner decides.** The page follows the questions people actually ask, in the order they ask them: who's teaching me, what lessons are there, what does it cost, how do I start, what do other people say, and how do I book.
+- **One page, in the order a learner decides.** The page follows the questions people actually ask, in the order they ask them: who's teaching me, what lessons are there, what does it cost, how do I start, and how do I book.
 - **Booking is always one tap away.** The header carries "Call Now" and "Book a Lesson" and stays pinned while you scroll. On phones, a bar at the bottom of the screen does the same job.
 - **Pricing that points somewhere.** Three ways to pay, with the 10-hour block marked as best value, a separate test-day package, and the cancellation policy stated up front instead of in small print.
 - **Answers before they're asked.** An FAQ covers the worries people have before they pick up the phone: how many lessons they'll need, whether they need a provisional licence first, manual or automatic, and whether nervous drivers are welcome.
@@ -73,7 +73,7 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ```
 src/
-  data/siteData.ts    All site content: services, prices, FAQs, testimonials
+  data/siteData.ts    All site content: services, prices and FAQs (reviews are held back until real ones arrive)
   types/              Types for that content
   sections/           One component per page section, in page order
   components/         Navbar, footer and the floating call-to-action bar
