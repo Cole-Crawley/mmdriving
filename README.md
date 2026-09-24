@@ -96,4 +96,4 @@ The FAQ answers a nervous learner's worries before they have to call:
 
 ![FAQ](docs/mm-faq.webp)
 
-*Designed and built by [Cole Crawley](https://colecrawley.vercel.app).*
+*Designed and built by [Cole Crawley](https://colecrawley.com).*
