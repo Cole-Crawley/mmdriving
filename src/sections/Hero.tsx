@@ -54,8 +54,8 @@ export default function Hero() {
 
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <strong>100+</strong>
-              <span>Students Passed</span>
+              <strong>6</strong>
+              <span>Towns Covered</span>
             </div>
             <div className={styles.divider} />
             <div className={styles.stat}>
@@ -64,8 +64,8 @@ export default function Hero() {
             </div>
             <div className={styles.divider} />
             <div className={styles.stat}>
-              <strong>5.0 ★</strong>
-              <span>Rated Instructor</span>
+              <strong>DVSA</strong>
+              <span>Approved</span>
             </div>
           </div>
         </div>
@@ -88,11 +88,11 @@ export default function Hero() {
               </div>
               <div className={styles.feat}>
                 <TrendingUp size={18} className={styles.featIcon} />
-                <span>Above-average pass rate</span>
+                <span>Structured, step-by-step lessons</span>
               </div>
               <div className={styles.feat}>
                 <Star size={18} className={styles.featIcon} />
-                <span>5-star rated by students</span>
+                <span>Patient with nervous learners</span>
               </div>
               <div className={styles.feat}>
                 <Phone size={18} className={styles.featIcon} />

@@ -91,8 +91,8 @@ export const WHY_ITEMS: WhyItem[] = [
   },
   {
     number: '03',
-    title: 'High First-Time Pass Rate',
-    body: '100+ students passed and counting. My teaching is built around what actually gets you through the test — not just theory.',
+    title: 'Lessons Built Around the Test',
+    body: 'Every lesson works towards the practical test itself, so you know exactly what the examiner will ask for, not just the theory.',
   },
   {
     number: '04',

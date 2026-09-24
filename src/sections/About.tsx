@@ -117,13 +117,13 @@ export default function About() {
             I've been teaching people to drive for years across Loughborough, Melton Mowbray and the wider East Midlands. I genuinely love seeing students go from nervous beginners to confident drivers. Whether you've never sat behind the wheel or just need a confidence boost — I'm here to help.
           </p>
           <p className={styles.body}>
-            My lessons are built around <strong>what actually works</strong> — structured, step-by-step, and always tailored to you. 100+ students passed and counting.
+            My lessons are built around <strong>what actually works</strong> — structured, step-by-step, and always tailored to you.
           </p>
 
           <div className={styles.credentials}>
             {[
               'DVSA-approved & DBS checked',
-              'High first-time pass rate',
+              'Structured, step-by-step lessons',
               'Patient with nervous learners',
               'Dual-control car — always safe',
               'Flexible mornings, evenings & weekends',

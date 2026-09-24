@@ -3,8 +3,8 @@ import styles from './TrustBar.module.css';
 
 const items = [
   { icon: <ShieldCheck size={18} />, text: 'DVSA Approved Instructor' },
-  { icon: <Star size={18} />, text: '5-Star Rated' },
-  { icon: <CheckCircle size={18} />, text: 'High First-Time Pass Rate' },
+  { icon: <CheckCircle size={18} />, text: 'Manual & Automatic Lessons' },
+  { icon: <Star size={18} />, text: 'Patient with Nervous Learners' },
   { icon: <MapPin size={18} />, text: '6 Test Centres Covered' },
   { icon: <Clock size={18} />, text: 'Flexible Lesson Times' },
 ];

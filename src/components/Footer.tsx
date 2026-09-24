@@ -20,7 +20,7 @@ export default function Footer() {
           </button>
           <p className={styles.tagline}>
             DVSA-approved driving lessons across Loughborough, Melton Mowbray, Nottingham, Leicester, Derby and Hinckley.
-            High pass rates. Real results.
+            Patient, structured lessons.
           </p>
         </div>
 
