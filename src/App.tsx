@@ -8,7 +8,9 @@ import Services from './sections/Services';
 import Pricing from './sections/Pricing';
 import Why from './sections/Why';
 import HowItWorks from './sections/HowItWorks';
-import Testimonials from './sections/Testimonials';
+// The Testimonials section is hidden until the client supplies real reviews (the current
+// ones are stand-ins). To bring it back, re-import it from './sections/Testimonials' and
+// render it again straight after HowItWorks.
 import CtaBanner from './sections/CtaBanner';
 import Faq from './sections/Faq';
 import Contact from './sections/Contact';
@@ -25,7 +27,6 @@ export default function App() {
         <Pricing />
         <Why />
         <HowItWorks />
-        <Testimonials />
         <CtaBanner />
         <Faq />
         <Contact />
