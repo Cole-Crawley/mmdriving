@@ -23,6 +23,7 @@ export default function Pay() {
               {/* every lane keeps the same space at the top, so the three headings line up whether or not there is a tag */}
               <p className={styles.tagRow}>{o.recommended && <span className={styles.tag}>Best value</span>}</p>
               <h3 className={styles.name}>{o.name.split(' ').map((word) => <span key={word}>{word} </span>)}</h3>
+              {o.price && <p className={styles.price}>{o.price}</p>}
               <p className={styles.summary}>{o.summary}</p>
               <p className={styles.body}>{o.body}</p>
               <ul className={styles.points}>

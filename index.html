@@ -28,7 +28,7 @@
     <!-- Theme -->
     <meta name="theme-color" content="#f4f5f1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" href="/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Structured Data — LocalBusiness -->
     <script type="application/ld+json">
@@ -90,8 +90,14 @@
     }
     </script>
 
-    <!-- Analytics: none yet. The old placeholder tag loaded a script for an ID that did not exist.
-         When the client has a GA4 Measurement ID, add the standard gtag snippet here. -->
+    <!-- Analytics: Vercel Web Analytics, which uses no cookies. It only loads on the live site, never on a
+         developer's computer, so a missing script can not cause an error there. -->
+    <script>
+      if (!/^(localhost|127\.|192\.168\.)/.test(location.hostname)) {
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        var s = document.createElement('script'); s.defer = true; s.src = '/_vercel/insights/script.js'; document.head.appendChild(s);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

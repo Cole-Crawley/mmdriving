@@ -12,7 +12,7 @@ export default function Questions() {
         <div className={styles.head}>
           <h2>Before you ask</h2>
           <p className="lead">
-            The six questions I hear most. If yours is not here, call or message me on{' '}
+            The questions I hear most. If yours is not here, call or message me on{' '}
             <a className="link" href={BUSINESS.phoneHref}>{BUSINESS.phoneDisplay}</a>.
           </p>
         </div>

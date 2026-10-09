@@ -47,4 +47,16 @@ export function goTo(hash: string, choice?: string) {
   if (!el) return;
   el.scrollIntoView({ block: 'start' });
   if (history.replaceState) history.replaceState(null, '', hash);
+  // move focus as well as the view, so keyboard and screen-reader users arrive in the same place
+  const heading = el.querySelector<HTMLElement>('h2, h1');
+  if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+}
+
+/**
+ * Counts the things that matter (an enquiry sent, a tap on the phone number or WhatsApp) in Vercel Web Analytics.
+ * It does nothing at all on a computer where the analytics script is not present, such as this one during development.
+ */
+export function track(name: string) {
+  const va = (window as unknown as { va?: (kind: string, data: { name: string }) => void }).va;
+  try { if (va) va('event', { name }); } catch { /* counting must never break the page */ }
 }

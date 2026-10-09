@@ -1,9 +1,10 @@
 import { TEACHING } from '../data/siteData';
+import { LPlate } from '../components/Signs';
 import styles from './Instructor.module.css';
 
 /**
  * Who is teaching me, and what is a lesson like? The first thing a nervous learner or their parent wants to know.
- * When the client sends a photo of himself and the car, it goes in the marked place below.
+ * The client does not want a photograph on the site, so trust is built from what a visitor can check for themselves.
  */
 export default function Instructor() {
   return (
@@ -11,7 +12,13 @@ export default function Instructor() {
       <div className="grid">
         <div className={styles.say}>
           <h2 className={`rise ${styles.quote}`}>No pressure. No shouting. Just practical help that gets you ready to pass.</h2>
-          {/* PHOTO: a portrait of Mohammed beside the car goes here once the client supplies one. */}
+          <div className={styles.check}>
+            <LPlate className={styles.badge} />
+            <p>
+              <b>Check me before you book.</b> I am a DVSA approved instructor and DBS checked. Ask to see my green badge
+              at your first lesson: every approved instructor has to show one in the windscreen.
+            </p>
+          </div>
         </div>
 
         <div className={styles.about}>

@@ -6,6 +6,11 @@
 .steps p { max-width: 22em; }
 .steps b { font-weight: 800; }
 
+.rather { display: grid; gap: 12px; }
+.rather b { font-weight: 800; }
+.ways { display: flex; flex-wrap: wrap; gap: 10px; }
+.ways :global(.btn) { min-height: 50px; padding: 10px 18px; }
+
 .direct { border-top: 2px solid var(--ink); }
 .direct div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
 .direct dt { font-size: var(--small); color: var(--mute); }
@@ -16,6 +21,7 @@
 .form { display: grid; gap: clamp(18px, 1.9vw, 26px); }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: end; }
 .pair .field { align-content: end; }
+.pair label span { display: block; }
 
 .field { display: grid; gap: 6px; }
 .field label { font-weight: 800; font-size: var(--lead); line-height: 1.2; letter-spacing: -.01em; }
@@ -25,7 +31,7 @@
 .field textarea { resize: vertical; min-height: 104px; line-height: 1.4; }
 .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 22px) 23px, calc(100% - 14px) 23px; background-size: 8px 8px; background-repeat: no-repeat; padding-right: 44px; }
 .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 4px solid var(--yellow); outline-offset: 0; box-shadow: none; }
-.picked { font-size: var(--small); color: var(--green); font-weight: 700; }
+.picked { font-size: var(--small); color: var(--green); font-weight: 700; margin-top: -8px; }
 
 /* errors: red is used for nothing else on the page except the L plate */
 .bad input { border-color: var(--red); }
@@ -36,7 +42,13 @@
 .problems a { color: var(--red); font-weight: 700; }
 .problems ul { display: grid; gap: 4px; }
 
-.note { color: var(--mute); text-align: center; }
+.note { color: var(--ink-2); text-align: center; }
+.note b { font-weight: 800; color: var(--ink); }
+.trap { display: none; }
+.privacy { border-top: 1px solid var(--line); padding-top: 4px; }
+.privacy summary { cursor: pointer; padding: 12px 0; font-size: var(--small); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; list-style: none; min-height: 44px; display: flex; align-items: center; }
+.privacy summary::-webkit-details-marker { display: none; }
+.privacy p { font-size: var(--small); line-height: 1.5; color: var(--ink-2); padding-bottom: 6px; }
 .dots::after { content: ''; display: inline-block; width: 1.2em; text-align: left; animation: dots 1.1s steps(4, end) infinite; }
 @keyframes dots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } }
 

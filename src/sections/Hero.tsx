@@ -1,4 +1,4 @@
-import { BUSINESS, TOWNS } from '../data/siteData';
+import { BUSINESS, TOWNS, whatsapp } from '../data/siteData';
 import { goTo } from '../hooks/useSigns';
 import { LPlate } from '../components/Signs';
 import styles from './Hero.module.css';
@@ -29,7 +29,10 @@ export default function Hero() {
           </p>
           <div className={styles.actions}>
             <a className="btn btn--flag" href="#book" onClick={(e) => { e.preventDefault(); goTo('#book'); }}>Book a first lesson</a>
-            <a className={styles.call} href={BUSINESS.phoneHref}>or call <b>{BUSINESS.phoneDisplay}</b></a>
+            <p className={styles.call}>
+              <span>or call <a href={BUSINESS.phoneHref}>{BUSINESS.phoneDisplay}</a></span>
+              <span>or <a href={whatsapp()}>message on WhatsApp</a></span>
+            </p>
           </div>
         </div>
       </div>

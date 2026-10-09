@@ -27,6 +27,8 @@ export interface PayOption {
   body: string;
   points: string[];
   value: string;
+  /** Shown on the sign once the client has confirmed it, for example 'from £70'. Leave out until then. */
+  price?: string;
   recommended?: boolean;
 }
 

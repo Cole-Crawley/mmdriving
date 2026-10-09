@@ -3,16 +3,16 @@
 
 /* The typeface is served from this site, so the page never waits on another company's server. */
 @font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-next-latin.woff2') format('woff2');
-  font-weight: 200 800;
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans-latin.woff2') format('woff2');
+  font-weight: 100 900;
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-next-latin-ext.woff2') format('woff2');
-  font-weight: 200 800;
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans-latin-ext.woff2') format('woff2');
+  font-weight: 100 900;
   font-display: swap;
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C4;
 }
@@ -33,7 +33,7 @@
   --tarmac: #1d2023;
   --line: rgba(11, 12, 12, .16);
 
-  --font: 'Atkinson Hyperlegible Next', 'Helvetica Neue', Arial, sans-serif;
+  --font: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
 
   /* One very large size, then a clear drop. */
   /* the headline is sized from the height of the screen as well as the width, so the Book button stays on the first screen of a short laptop */
@@ -72,6 +72,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 button { background: none; border: 0; padding: 0; cursor: pointer; }
 a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; box-shadow: 0 0 0 6px var(--ink); }
+h1[tabindex='-1']:focus, h2[tabindex='-1']:focus { outline: none; box-shadow: none; }
 ::selection { background: var(--yellow); color: var(--ink); }
 
 /* Lettering: lighter on dark signs, heavier on light ones, never capitals, as on the road. */

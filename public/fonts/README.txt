@@ -1,0 +1,2 @@
+Public Sans, licensed under the SIL Open Font License 1.1 (https://openfontlicense.org).
+Source: https://github.com/uswds/public-sans

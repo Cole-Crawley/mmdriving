@@ -104,8 +104,9 @@ The client has not yet supplied real reviews or a pass rate, so the page cannot 
 3. **Being useful before asking for anything.** The route from provisional licence to pass, with official links.
 4. **Being honest.** "Prices on request" is said plainly with the reason, and nothing is claimed that is not confirmed.
 
-Slots are left in the code for a photo of Mohammed, a photo of the car, reviews and a pass rate, so they can be added
-the day the client sends them.
+The client does not want a photograph on the site. In its place the instructor section tells visitors what they
+can check for themselves: DVSA approval, the DBS check, and the green badge every approved instructor must show in the
+windscreen. Reviews, a pass rate and prices each have a place ready in the data file for the day they are confirmed.
 
 ---
 
@@ -188,10 +189,13 @@ Colour has one job each, like the real system: **green** is the main surface, **
 ### Typeface
 The real sign lettering is Transport. The free copies of it are licensed for private, non-commercial use only
 [article: roads.org.uk], and the commercial versions cost money the client is not spending.
-I compared ten open-licence faces set as sign text (`_research/shots/_specimen.jpg`). **Atkinson Hyperlegible Next**
-is the closest in rhythm and shares Transport's reason for existing: it was drawn by the Braille Institute so that
-letters cannot be mistaken for each other. It has the tailed lowercase l, open shapes and generous spacing. One family,
-no second face, exactly like the signs. It is served from the site itself.
+I compared ten open-licence faces set as sign text (`_research/shots/_specimen.jpg`, `_specimen2.jpg`).
+
+The first build used Atkinson Hyperlegible Next. On review its zero has a slash through it, which makes the phone
+number, the most important thing on the page, look unfamiliar (and would do the same to prices). The site now uses
+**Public Sans**: the same tailed lowercase l and open shapes as Transport, a plain zero, a heavy weight that holds up
+at 130px, and the same kind of origin (it was drawn for a government design system, as GDS Transport was for GOV.UK).
+One family, no second face, exactly like the signs. It is served from the site itself.
 
 ### Sizes and spacing (from section 1)
 - Headline: 44px on a phone up to 128px on a wide screen, line height 0.98, tracking -0.02em.
@@ -264,7 +268,46 @@ the dark call-to-action banner (the form is the call to action).
 | Whole page | Text and signs are plain HTML and SVG, so there is nothing to wait for | A 404 page in the same sign language | n/a |
 | Offline | n/a | Form tells you it could not send and keeps your words | n/a |
 
-## 10. Sources
+## 10. Review after the first build, and what changed
+
+Honest grade of the first build: **about 8 out of 10 for experience, 6 out of 10 for conversion.**
+
+What it did well: says what, where and how to book on the first screen at every screen size; one typeface and a
+colour system where yellow only ever means "press this"; a form with every state; nothing to wait for; 100 in all
+four Lighthouse categories.
+
+What was missing, and what was done about each:
+
+| Gap | Why it matters | Change |
+|---|---|---|
+| Only two ways to make contact: a form and a phone call | In a 2024 Uswitch survey of 2,000 UK adults, nearly 70% of 18 to 34 year olds preferred texting to calling and 23% never answer calls. The audience is 17 to 25 | WhatsApp is on the first sign, in the phone bar, and beside the form, each opening with a first message already written (including the lesson chosen) |
+| Slashed zeros in the phone number | The number is the main conversion on a phone | Typeface changed to Public Sans |
+| No privacy information beside the form | UK GDPR: people must be told who gets their details, why, who else sees them and how long they are kept, at the moment the details are collected | "How your details are used" opens under the button. The client should confirm the wording; the ICO has a free generator for a full notice |
+| Nothing said about cost or commitment at the moment of sending | "Doubt remover" lines under a button are a well-evidenced lift (one published test: 9.5% to 21.3%) | "Nothing to pay now and no commitment" under the button |
+| "I reply within a few hours" shown at midnight | An untrue promise costs trust | The promise follows the clock: within a few hours in lesson hours, "tomorrow morning" after 8pm, "this morning" before 7am |
+| A refresh or accidental Back lost what was typed | Lost work is the classic form failure | The draft is kept in the browser tab until it is sent |
+| Offline looked the same as a broken form service | Different problems need different advice | A separate message for each |
+| No protection from automated spam | The client reads every enquiry on his phone | A hidden field only robots fill in; those get a thank you and nothing is sent |
+| The menu did not show where you were | Wayfinding on a long page | The link for the section on screen is underlined |
+| Focus stayed behind when a link jumped to a section; the page behind the open phone menu was still reachable | Keyboard and screen-reader users were left in the wrong place | Focus moves with the jump; the page behind the menu is inert |
+| Parents were not spoken to | They often pay, and check credentials first | A question for parents, and "Check me before you book" in the instructor section |
+| No way to tell whether the page works | Conversion cannot be improved without counting | Vercel Web Analytics (no cookies) loads on the live site only, counting enquiries sent, taps on Call and taps on WhatsApp |
+| No prices | Hiding prices loses visitors silently; learners compare on price | Cannot be fixed without the client. Each way to pay has a `price` field that shows on the sign the moment a figure is confirmed |
+| No reviews or pass rate | 97% of people read reviews for local businesses | Cannot be fixed without the client |
+
+Grade after this pass: **about 9 for experience, 7 for conversion.** The ceiling on conversion is the two things
+only the client can supply: prices and real reviews.
+
+Still open: a real test with learners and a parent; per-town pages for local search; the canonical address in
+`index.html` points at mmdriving.co.uk, which must be the real domain before launch.
+
+Extra sources for this section: Uswitch survey via Newsweek (https://www.newsweek.com/gen-z-problem-telephobia-2032493),
+CNBC on phone anxiety (https://www.cnbc.com/2025/02/17/gen-z-are-taking-telephobia-courses-to-learn-the-lost-art-of-a-call.html),
+Computer Weekly on the ICO privacy notice tool (https://www.computerweekly.com/news/366605875/ICO-launches-privacy-notice-tool-for-SMEs),
+Venue on microcopy (https://venue.cloud/news/insights/small-microcopy-tweaks-that-quietly-boost-conversions),
+Trusti on hidden prices (https://business-blog.trusti.com/why-hiding-your-prices-is-costing-you-more-than-you-think/).
+
+## 11. Sources
 - passrates.uk, How to choose a UK driving instructor: https://passrates.uk/guide/choosing-driving-instructor-uk
 - Colorlib, 22 best driving school website examples: https://colorlib.com/wp/driving-school-website-examples/
 - Brand Glow Up, driving school web design examples: https://www.brandglowup.com/examples-driving-school-web-design/

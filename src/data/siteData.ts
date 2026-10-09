@@ -9,6 +9,8 @@ export const BUSINESS = {
   phoneDisplay: '07762 363936',
   phoneHref: 'tel:+447762363936',
   whatsappHref: 'https://wa.me/447762363936',
+  // used to promise a reply honestly: the same day inside these hours, the next morning outside them
+  lessonHours: { open: 7, close: 20 },
   email: 'sohag78694@gmail.com',
   formEndpoint: 'https://formspree.io/f/mgodepwk',
   hours: [
@@ -17,6 +19,10 @@ export const BUSINESS = {
   ],
   replyTime: 'within a few hours',
 };
+
+/** A WhatsApp link that opens with a first message already written, so nobody faces an empty box. */
+export const whatsapp = (about?: string) =>
+  `${BUSINESS.whatsappHref}?text=${encodeURIComponent(`Hi Mohammed, I'd like to ask about ${about ? about.toLowerCase() : 'driving lessons'}.`)}`;
 
 // Home town first, then the five others roughly as they sit on the map around Loughborough.
 // The angle places each town on the roundabout sign (0 is straight up, clockwise).
@@ -144,6 +150,10 @@ export const FAQS: FaqItem[] = [
   {
     question: "I'm nervous. Is that a problem?",
     answer: 'No, and it is more common than people think. I have helped a lot of anxious learners become confident drivers. Lessons are relaxed and always at your pace.',
+  },
+  {
+    question: "I'm a parent booking for my son or daughter. What should I know?",
+    answer: 'I am DVSA approved and DBS checked, and every lesson is in a dual-control car. You are welcome to call me first and ask anything. Ask to see my green instructor badge at the first lesson: every approved instructor has to show one in the windscreen.',
   },
   {
     question: 'Which areas do you cover?',
