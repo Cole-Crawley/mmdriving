@@ -1,10 +1,14 @@
 /* a strip of tarmac with a dashed centre line down the left; each stop is a marker on the line */
-.road { grid-column: 1 / -1; position: relative; background: var(--tarmac); color: var(--white); border-radius: var(--corner); padding: clamp(18px, 2.4vw, 40px) clamp(22px, 3.4vw, 60px); font-weight: 500; }
-.road::before { content: ''; position: absolute; top: clamp(40px, 4.4vw, 72px); bottom: clamp(40px, 4.4vw, 72px); left: calc(clamp(22px, 3.4vw, 60px) + clamp(22px, 2.2vw, 30px) - 3px); width: 6px; background: repeating-linear-gradient(to bottom, var(--white) 0 22px, transparent 22px 40px); }
+.road { --mk: clamp(44px, 4.4vw, 60px); --pad: clamp(20px, 2.4vw, 34px); grid-column: 1 / -1; position: relative; background: var(--tarmac); color: var(--white); border-radius: var(--corner); padding: clamp(18px, 2.4vw, 40px) clamp(22px, 3.4vw, 60px); font-weight: 500; }
+/* The centre line is drawn stop to stop, starting below one marker and ending above the next, so it never
+   touches a number or shows behind one. It is laid as each stop arrives. */
+.stop:not(:last-child)::after { content: ''; position: absolute; left: calc(var(--mk) / 2 - 3px); top: calc(var(--pad) + var(--mk) + 14px); bottom: calc(14px - var(--pad)); width: 6px; background: repeating-linear-gradient(to bottom, var(--white) 0 20px, transparent 20px 36px); transform-origin: 50% 0; }
+:global(.js) .stop::after { transform: scaleY(0); transition: transform .9s var(--out) .35s; }
+:global(.js) .stop:global(.is-up)::after { transform: scaleY(1); }
 
-.stop { position: relative; display: grid; grid-template-columns: clamp(44px, 4.4vw, 60px) minmax(0, 1fr) auto; column-gap: clamp(20px, 3vw, 48px); align-items: start; padding: clamp(20px, 2.4vw, 34px) 0; }
+.stop { position: relative; display: grid; grid-template-columns: var(--mk) minmax(0, 1fr) auto; column-gap: clamp(20px, 3vw, 48px); align-items: start; padding: var(--pad) 0; }
 .stop + .stop { border-top: 1px solid rgba(255, 255, 255, .22); }
-.marker { position: relative; z-index: 1; display: grid; place-items: center; width: clamp(44px, 4.4vw, 60px); aspect-ratio: 1; border-radius: 50%; background: var(--white); color: var(--ink); font-weight: 800; font-size: var(--lead); }
+.marker { position: relative; z-index: 1; display: grid; place-items: center; width: var(--mk); aspect-ratio: 1; border-radius: 50%; background: var(--white); color: var(--ink); font-weight: 800; font-size: var(--lead); }
 .withMe .marker { background: var(--yellow); }
 .body { display: grid; gap: 8px; justify-items: start; max-width: 40em; }
 .body h3 { font-weight: 600; }
@@ -14,8 +18,7 @@
 .withMe .who { background: var(--yellow); color: var(--ink); border-color: var(--yellow); font-weight: 800; }
 
 @media (max-width: 860px) {
-  .road { padding: 14px 18px; }
-  .road::before { left: calc(18px + 22px - 3px); top: 34px; bottom: 34px; }
-  .stop { grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; padding: 22px 0; }
+  .road { --mk: 44px; --pad: 22px; padding: 14px 18px; }
+  .stop { grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; }
   .who { grid-column: 2; justify-self: start; margin-top: 12px; }
 }

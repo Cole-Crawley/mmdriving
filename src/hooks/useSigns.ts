@@ -15,14 +15,16 @@ export function useSigns() {
     const up = (el: Element) => el.classList.add('is-up');
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) { up(e.target); io.unobserve(e.target); } }),
-      { rootMargin: '0px 0px -8% 0px' },
+      // a sign goes up once its top is a fifth of the way up the screen, so the movement is seen and not missed
+      { rootMargin: '0px 0px -20% 0px' },
     );
     targets().forEach((el) => io.observe(el));
 
-    const net = () => targets().forEach((el) => { if (el.getBoundingClientRect().top < window.innerHeight * 0.96) up(el); });
+    // the safety net uses the same line as the observer, so it can never put a sign up early and steal the animation
+    const net = () => targets().forEach((el) => { if (el.getBoundingClientRect().top < window.innerHeight * 0.8) up(el); });
     let checks = 0;
     const timer = window.setInterval(() => { net(); if (++checks > 8) window.clearInterval(timer); }, 1200);
-    const later = () => window.setTimeout(net, 300);
+    const later = () => window.setTimeout(net, 900);
     window.addEventListener('scroll', later, { passive: true });
     window.addEventListener('resize', later);
     window.addEventListener('pageshow', later);

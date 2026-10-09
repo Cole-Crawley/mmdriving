@@ -15,7 +15,7 @@
 .foot { grid-column: 1 / -1; grid-row: 3; align-self: end; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: clamp(24px, 4vw, 64px); margin-top: clamp(40px, 6vw, 96px); padding-top: clamp(20px, 2.4vw, 32px); border-top: var(--border) solid var(--white); }
 .intro { max-width: 30em; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; }
-.actions :global(.btn) { min-height: 60px; font-size: var(--lead); padding-left: 26px; }
+.actions :global(.btn) { min-height: 60px; font-size: var(--lead); padding-inline: 26px; }
 .call { line-height: 1.35; } .call span { display: block; white-space: nowrap; }
 .call a { display: inline-block; padding: 4px 0; font-weight: 700; white-space: nowrap; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .call a:hover { text-decoration-thickness: 4px; }
