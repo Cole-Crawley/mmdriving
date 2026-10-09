@@ -48,7 +48,7 @@ export function Roundabout() {
     return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
   };
   return (
-    <svg className={styles.roundabout} viewBox="0 0 600 640" role="img" aria-label={`Roundabout sign. From Loughborough, roads lead to ${others.map((t) => t.name).join(', ')}.`}>
+    <svg className={styles.roundabout} viewBox="-80 0 760 640" role="img" aria-label={`Roundabout sign. From Loughborough, roads lead to ${others.map((t) => t.name).join(', ')}.`}>
       <g className={styles.arms} fill="none" stroke="#fff" strokeWidth="26" strokeLinecap="butt">
         {/* the road in, from Loughborough, wider than the rest as on a real sign */}
         <path className={styles.arm} style={{ ['--i' as string]: 0 }} d={`M${cx} 560V${cy + ring}`} strokeWidth="34" />

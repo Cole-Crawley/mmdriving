@@ -6,7 +6,7 @@ import type { FormState } from '../types';
 import styles from './Book.module.css';
 
 const EMPTY: FormState = { name: '', phone: '', area: '', lessonType: '', message: '' };
-const CHOICES = [...LESSON_GROUPS.flatMap((g) => g.lessons.map((l) => l.value)), ...PAY_OPTIONS.map((o) => o.value), TEST_DAY.value, 'Not sure yet'];
+const CHOICES = [...LESSON_GROUPS.flatMap((g) => g.lessons.map((l) => l.value)), ...PAY_OPTIONS.map((o) => o.value), TEST_DAY.value, 'Not sure yet'];   // prices are not sent with the enquiry
 const DRAFT = 'mm-enquiry-draft';
 type Status = 'idle' | 'sending' | 'sent' | 'failed' | 'offline';
 type Errors = Partial<Record<keyof FormState, string>>;

@@ -29,6 +29,8 @@ export interface PayOption {
   value: string;
   /** Shown on the sign once the client has confirmed it, for example 'from £70'. Leave out until then. */
   price?: string;
+  /** What the price buys, in a few words, shown beside it. */
+  per?: string;
   recommended?: boolean;
 }
 

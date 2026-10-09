@@ -292,7 +292,7 @@ What was missing, and what was done about each:
 | Focus stayed behind when a link jumped to a section; the page behind the open phone menu was still reachable | Keyboard and screen-reader users were left in the wrong place | Focus moves with the jump; the page behind the menu is inert |
 | Parents were not spoken to | They often pay, and check credentials first | A question for parents, and "Check me before you book" in the instructor section |
 | No way to tell whether the page works | Conversion cannot be improved without counting | Vercel Web Analytics (no cookies) loads on the live site only, counting enquiries sent, taps on Call and taps on WhatsApp |
-| No prices | Hiding prices loses visitors silently; learners compare on price | Cannot be fixed without the client. Each way to pay has a `price` field that shows on the sign the moment a figure is confirmed |
+| No prices | Hiding prices loses visitors silently; learners compare on price | Prices are now on the gantry and on the first screen. **They are typical prices for the Loughborough area (about £38 to £40 an hour, £340 to £390 for ten hours, looked up on 9 October 2026), not the client's own.** The site is a portfolio piece until he supplies his; every figure is in one marked block in `siteData.ts` and must be replaced before the redesign goes live |
 | No reviews or pass rate | 97% of people read reviews for local businesses | Cannot be fixed without the client |
 
 Grade after this pass: **about 9 for experience, 7 for conversion.** The ceiling on conversion is the two things

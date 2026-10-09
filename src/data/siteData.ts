@@ -74,22 +74,31 @@ export const LESSON_GROUPS: LessonGroup[] = [
   },
 ];
 
+// PRICES: these are typical prices for the Loughborough area, looked up on 9 October 2026 (local schools charge
+// about £38 to £40 an hour and £340 to £390 for ten hours). They are NOT the client's own prices.
+// Replace every figure below, and the one in HERO_PRICE, with Mohammed's real prices before this goes live.
+export const HERO_PRICE = 'From £36 an hour';
+
 export const PAY_OPTIONS: PayOption[] = [
   {
     id: 'payg',
     name: 'Pay as you learn',
     summary: 'One lesson at a time.',
     body: 'Book week by week with no commitment. Right if you are just starting, or not sure how often you want lessons.',
-    points: ['Two-hour lessons', 'No contract', 'Book week by week'],
+    points: ['£38 an hour', 'No contract', 'Book week by week'],
     value: 'Pay as you learn',
+    price: '£76',
+    per: 'for a two-hour lesson',
   },
   {
     id: 'block',
     name: '10-hour block',
     summary: 'Ten hours, paid up front.',
     body: 'Costs less per hour than single lessons, and the hours never expire, so you use them at your own pace.',
-    points: ['Five two-hour lessons', 'Lower price per hour', 'Hours never expire'],
+    points: ['£36 an hour', 'Saves £20 on ten hours', 'Hours never expire'],
     value: '10-hour block',
+    price: '£360',
+    per: 'for ten hours',
     recommended: true,
   },
   {
@@ -97,14 +106,17 @@ export const PAY_OPTIONS: PayOption[] = [
     name: '90-minute sessions',
     summary: 'Shorter, more often.',
     body: 'Ninety minutes is long enough to cover real ground, and easier to fit around a busy week.',
-    points: ['90 minutes each', 'Easier to fit in', 'Suits every level'],
+    points: ['£38 an hour', 'Easier to fit in', 'Suits every level'],
     value: '90-minute sessions',
+    price: '£57',
+    per: 'for a 90-minute session',
   },
 ];
 
 export const TEST_DAY = {
   name: 'Test-day lesson',
   value: 'Test-day lesson',
+  price: '£100',
   body: 'Two hours on the day of your test, driving the roads around the test centre so you walk in warmed up. Then I drop you at the door.',
 };
 

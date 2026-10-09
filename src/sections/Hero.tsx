@@ -1,4 +1,4 @@
-import { BUSINESS, TOWNS, whatsapp } from '../data/siteData';
+import { BUSINESS, HERO_PRICE, TOWNS, whatsapp } from '../data/siteData';
 import { goTo } from '../hooks/useSigns';
 import { LPlate } from '../components/Signs';
 import styles from './Hero.module.css';
@@ -40,7 +40,7 @@ export default function Hero() {
       <ul className={styles.facts}>
         <li><b>DVSA approved</b> and DBS checked</li>
         <li><b>Dual-control car</b>, manual or automatic</li>
-        <li><b>7am to 8pm</b> on weekdays, <b>8am to 6pm</b> at weekends</li>
+        <li><b>{HERO_PRICE}</b>, with nothing to pay until your first lesson is booked</li>
       </ul>
     </section>
   );
