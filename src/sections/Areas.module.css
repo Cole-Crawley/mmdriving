@@ -1,0 +1,11 @@
+.sign { grid-column: 1 / 7; padding: clamp(28px, 4vw, 64px) clamp(34px, 5vw, 84px); align-self: start; }
+.text { grid-column: 8 / -1; display: grid; gap: clamp(16px, 1.8vw, 26px); align-content: center; }
+.towns { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gap); border-top: 2px solid var(--ink); }
+.towns li { padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 800; font-size: var(--lead); letter-spacing: -.012em; }
+.text :global(.link) { display: inline-block; padding: 6px 0; }
+
+@media (max-width: 860px) {
+  .sign, .text { grid-column: 1 / -1; }
+  .sign { padding: 26px 30px; }
+  .text { margin-top: 36px; }
+}

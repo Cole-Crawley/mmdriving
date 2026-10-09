@@ -1,98 +1,55 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
-import { NAV_LINKS } from '../data/siteData';
+import { useEffect, useRef, useState } from 'react';
+import { BUSINESS, NAV_LINKS } from '../data/siteData';
+import { goTo } from '../hooks/useSigns';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
 
+  // Escape closes the menu and hands focus back to the button that opened it.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { setOpen(false); menuButton.current?.focus(); } };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [open]);
 
-  const handleLink = (href: string) => {
-    setOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  };
+  const follow = (e: React.MouseEvent, href: string) => { e.preventDefault(); setOpen(false); goTo(href); };
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <nav className={`container ${styles.nav}`}>
-        {/* Logo */}
-        <a href="#hero" className={styles.logo} onClick={() => handleLink('#hero')}>
-          <span className={styles.logoMark}>MM</span>
-          <span className={styles.logoText}>Driving</span>
+    <header className={styles.header}>
+      <a className="skip" href="#lessons">Skip to the lessons</a>
+      <nav className={`wrap ${styles.nav}`} aria-label="Main">
+        <a className={styles.logo} href="#top" onClick={(e) => follow(e, '#top')} aria-label="MMDriving, back to the top">
+          <span className={styles.mark}>MM</span>
+          <span className={styles.word}>Driving</span>
         </a>
 
-        {/* Desktop links */}
         <ul className={styles.links}>
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <button className={styles.link} onClick={() => handleLink(link.href)}>
-                {link.label}
-              </button>
-            </li>
+          {NAV_LINKS.map((l) => (
+            <li key={l.href}><a href={l.href} onClick={(e) => follow(e, l.href)}>{l.label}</a></li>
           ))}
         </ul>
 
-        {/* Desktop CTA */}
         <div className={styles.actions}>
-          <a href="tel:+447762363936" className={`btn btn--outline ${styles.callBtn}`}>
-            <Phone size={15} />
-            Call Now
-          </a>
-          <button
-            className="btn btn--primary"
-            onClick={() => handleLink('#contact')}
-          >
-            Book a Lesson
+          <a className={styles.phone} href={BUSINESS.phoneHref}><span className="vh">Call </span>{BUSINESS.phoneDisplay}</a>
+          <a className={`btn btn--flag ${styles.book}`} href="#book" onClick={(e) => follow(e, '#book')}>Book a lesson</a>
+          <button ref={menuButton} className={styles.menu} type="button" aria-expanded={open} aria-controls="menu" onClick={() => setOpen(!open)}>
+            {open ? 'Close' : 'Menu'}
           </button>
         </div>
-
-        {/* Hamburger */}
-        <button
-          className={styles.hamburger}
-          onClick={() => setOpen(!open)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
       </nav>
 
-      {/* Mobile menu */}
-      <div className={`${styles.mobileMenu} ${open ? styles.mobileOpen : ''}`}>
-        <div className={styles.mobileInner}>
-          {NAV_LINKS.map((link) => (
-            <button
-              key={link.href}
-              className={styles.mobileLink}
-              onClick={() => handleLink(link.href)}
-            >
-              {link.label}
-            </button>
+      <div id="menu" className={`${styles.sheet} ${open ? styles.sheetOpen : ''}`} hidden={!open}>
+        <ul>
+          {NAV_LINKS.map((l) => (
+            <li key={l.href}><a href={l.href} onClick={(e) => follow(e, l.href)}>{l.label}</a></li>
           ))}
-          <div className={styles.mobileCtas}>
-            <a href="tel:+447762363936" className="btn btn--outline btn--lg">
-              <Phone size={16} />
-              07762 363936
-            </a>
-            <button
-              className="btn btn--primary btn--lg"
-              onClick={() => handleLink('#contact')}
-            >
-              Book a Lesson
-            </button>
-          </div>
-        </div>
+          <li><a href="#book" onClick={(e) => follow(e, '#book')}>Book a lesson</a></li>
+        </ul>
+        <p><a href={BUSINESS.phoneHref}>Call {BUSINESS.phoneDisplay}</a></p>
       </div>
     </header>
   );

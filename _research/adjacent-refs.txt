@@ -1,0 +1,122 @@
+## duck 200 https://duck.school/en
+{"bg":"rgb(242, 241, 236)","ink":"rgb(32, 32, 35)","fams":["OpenSansSemiBold 138","Kudryashev Display W03 Regular 63","OpenSansBold 2"],"links":["ABOUT US > /en/about-us","ABOUT US       \nABOUT  > /en/about-us"],"media":["-30-129% 1.00","33-69% 1.62","38-73% 1.89","44-79% 1.89","50-85% 1.89"],"secs":[900,4427,4500,5400,614],"h":18.2}
+1440px wide
+35px lh1.15 ls0.000 w400 n4 cpl17 x44% w34% gap24
+12px lh1.35 ls0.000 w400 caps n25 cpl38 x43% w29% gap0
+12px lh1.38 ls0.000 w400 caps n1 cpl19 x136% w29% gap-
+## cuvva 200 https://www.cuvva.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(5, 2, 36)","fams":["neue-haas-grotesk-text 194","Riforma 16"],"links":["About us > /about","Our mission > /about","eligibility requiremen > https://support.cuvva.com/en/articles/5913696-who-can-cuvva-insure"],"media":["59-94% 1.00","57-92% 1.31","5-40% 1.00","8-24% 1.26","24-40% 1.26","41-57% 1.26","58-73% 1.26","74-90% 1.26","57-92% 1.00","5-40% 1.00","57-92% 1.00"],"secs":[],"h":19.6}
+1440px wide
+64px lh1.13 ls-0.005 w900 n1 cpl11 x5% w36% gap-
+48px lh1.17 ls-0.005 w900 n15 cpl16 x30% w39% gap-
+24px lh1.33 ls-0.005 w700 n18 cpl- x7% w81% gap-
+20px lh1.40 ls-0.005 w700 n28 cpl28 x38% w17% gap12
+20px lh1.60 ls0.020 w400 n22 cpl48 x30% w36% gap7
+18px lh1.56 ls0.020 w400 n29 cpl98 x9% w74% gap-
+16px lh1.25 ls0.020 w500 n25 cpl- x10% w16% gap-
+16px lh1.50 ls0.020 w500 n10 cpl- x36% w21% gap-
+16px lh1.50 ls0.020 w400 n37 cpl34 x40% w21% gap0
+## marshmallow 200 https://www.marshmallow.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(51, 51, 51)","fams":["Circular 188","Arial 48","Marshmallowyouth 22","Gt Alpina Standard 1"],"links":["About us > /about-us","Who can drive my car"," > /about-us"," > /blog/who-can-drive-my-car","Learn about car insura > /car-insurance","Learn about home insur > /home-insurance"],"media":["72-93% 1.91","72-93% 1.91","72-93% 1.91","72-93% 1.91","72-93% 1.91","49-99% 0.99","3-38% 0.90","13-36% 1.35","38-61% 1.35","63-86% 1.35"],"secs":[442,428,466,277,391],"h":6.1}
+1440px wide
+80px lh0.94 ls-0.013 w700 n1 cpl12 x4% w41% gap-
+56px lh0.96 ls-0.020 w700 n6 cpl9 x8% w65% gap16
+40px lh0.96 ls-0.025 w700 n1 cpl14 x42% w28% gap-
+32px lh1.00 ls-0.020 w700 n4 cpl15 x39% w20% gap8
+24px lh1.20 ls0.000 w700 n5 cpl0 x73% w14% gap-
+24px lh1.00 ls-0.020 w700 n1 cpl- x13% w20% gap-
+24px lh1.20 ls0.020 w500 n1 cpl- x4% w60% gap-
+22px lh1.20 ls0.000 w400 n1 cpl- x6% w13% gap-
+20px lh1.10 ls0.000 w400 n1 cpl35 x4% w31% gap-
+## veygo 200 https://www.veygo.com
+{"bg":"rgb(239, 255, 252)","ink":"rgb(3, 43, 51)","fams":["Momo Trust Sans 552","Momo Trust Display 48"],"links":["The story of road sign > https://www.veygo.com/guides/the-story-of-road-signs-in-the-uk/","About us > https://www.veygo.com/about-us/"],"media":["54-85% 1.05","85-116% 1.05","-16-30% 1.05","18-42% 0.54","-117--97% 1.05","-58--39% 1.05","0-19% 1.05","58-78% 1.05","117-136% 1.05","175-194% 1.05","233-253% 1.05","292-311% 1.05","350-369% 1.05","408-428% 1.05"],"secs":[893,942,814,839,941,644,869,860],"h":8.9}
+1440px wide
+72px lh1.00 ls-0.040 w400 n1 cpl13 x7% w42% gap-482
+60px lh1.00 ls-0.040 w400 n6 cpl13 x11% w47% gap-
+32px lh1.00 ls-0.040 w400 n2 cpl- x65% w18% gap20
+24px lh1.20 ls-0.015 w400 n4 cpl- x3% w21% gap20
+24px lh1.00 ls-0.040 w400 n3 cpl- x42% w18% gap-
+22px lh1.20 ls-0.016 w400 n2 cpl52 x11% w69% gap20
+20px lh1.00 ls-0.040 w400 n2 cpl6 x45% w39% gap-
+20px lh1.20 ls-0.018 w400 n11 cpl28 x45% w23% gap8
+20px lh1.20 ls-0.040 w400 n6 cpl- x31% w36% gap16
+## tend 200 https://www.hellotend.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(108, 103, 92)","fams":["Founders Grotesk 479","FontAwesome 116","Nantes 5"],"links":["New York City > /site/dentist-studios/new-york-city","Boston > /site/dentist-studios/boston","Washington DC > /site/dentist-studios/washington-dc-metro","Atlanta > /site/dentist-studios/atlanta","Westport > /site/studios/westport","Nashville > /site/studios/east-nashville","Patients > /site/patient-information","About > /site/about","About Tend Dental > /site/about","Convenient locations > /site/home#studios","Modern, mindful dental > /site/about","Evening & Saturday hou > /site/about"],"media":["1-23% 0.55","76-98% 0.55","-7-17% 0.58","82-106% 0.58","4-33% 1.38","35-64% 1.38","66-95% 1.38","0-99% 4.77"],"secs":[648,648,562,562,610,1175,748,488],"h":8.2}
+1440px wide
+63px lh1.19 ls0.000 w700 n1 cpl18 x26% w46% gap-
+48px lh1.29 ls0.000 w700 n5 cpl28 x20% w60% gap-
+38px lh1.29 ls0.000 w700 n2 cpl- x51% w44% gap-
+33px lh1.29 ls0.000 w400 n1 cpl- x24% w51% gap44
+30px lh1.25 ls0.000 w400 n2 cpl8 x192% w29% gap-
+30px lh1.43 ls0.006 w400 n30 cpl56 x402% w66% gap-
+30px lh1.20 ls0.006 w400 n1 cpl15 x4% w44% gap20
+30px lh1.05 ls0.000 w400 n4 cpl- x60% w21% gap-
+26px lh1.35 ls0.007 w400 n1 cpl53 x27% w46% gap16
+## physio101 200 https://101physio.ca
+{"bg":"rgb(242, 242, 242)","ink":"rgb(0, 62, 138)","fams":["Poppins 528","Font Awesome 5 Free 9","Helvetica 2","icomoon 1"],"links":["info@physio101.ca > info@physio101.ca","About > https://101physio.ca/about/"," > https://101physio.ca/about/"],"media":["102-118% 1.19","102-118% 1.19","102-118% 1.23","51-93% 1.01","56-93% 1.00","51-77% 1.00","11-47% 1.45","52-88% 1.45","51-93% 1.00"],"secs":[],"h":9.9}
+1440px wide
+72px lh1.10 ls0.000 w600 n1 cpl12 x6% w42% gap10
+60px lh1.10 ls0.000 w600 n1 cpl13 x6% w33% gap-
+34px lh1.40 ls0.000 w600 n6 cpl25 x9% w80% gap-
+30px lh1.40 ls0.000 w600 n1 cpl19 x6% w22% gap-
+27px lh1.40 ls0.000 w600 n1 cpl0 x102% w16% gap-
+26px lh1.15 ls0.000 w800 n9 cpl16 x97% w25% gap14
+24px lh1.40 ls0.000 w600 n14 cpl19 x9% w23% gap20
+18px lh1.75 ls0.000 w300 n6 cpl51 x59% w15% gap-
+18px lh1.10 ls0.000 w400 n3 cpl- x13% w33% gap-
+## foothills 200 https://foothillspt.com
+{"bg":"rgb(255, 254, 250)","ink":"rgb(62, 42, 75)","fams":["Geologica 284","Young Serif 36"],"links":["About Us > https://foothillspt.com/about-us/","Patient Information > https://foothillspt.com/patient-information/"],"media":["6-47% 1.19","56-84% 0.91"],"secs":[6278],"h":8.5}
+1440px wide
+59px lh1.00 ls0.000 w500 n8 cpl21 x5% w56% gap-
+28px lh1.00 ls0.000 w500 n15 cpl16 x37% w25% gap-
+26px lh1.50 ls0.000 w500 n10 cpl44 x5% w56% gap14
+24px lh1.00 ls0.000 w700 n1 cpl- x18% w24% gap-
+18px lh1.11 ls0.000 w500 n1 cpl10 x69% w14% gap-
+18px lh1.50 ls0.000 w500 n3 cpl34 x38% w23% gap-
+16px lh1.50 ls0.000 w500 n23 cpl35 x37% w25% gap14
+15px lh1.00 ls0.000 w700 n3 cpl- x7% w12% gap-15
+14px lh1.50 ls0.000 w500 n1 cpl43 x72% w21% gap-
+## govuk 200 https://www.gov.uk/learn-to-drive-a-car
+{"bg":"rgb(255, 255, 255)","ink":"rgb(0, 0, 0)","fams":["GDS Transport 334"],"links":["Transparency > /search/transparency-and-freedom-of-information-releases","Find out about Pass Pl > /pass-plus","© Crown copyright > https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"],"media":[],"secs":[877],"h":2.8}
+1440px wide
+36px lh1.11 ls0.000 w700 n1 cpl- x16% w44% gap-
+24px lh1.25 ls0.000 w700 n3 cpl12 x16% w44% gap-
+24px lh1.30 ls0.000 w700 n6 cpl- x20% w22% gap-
+19px lh1.32 ls0.000 w400 n29 cpl43 x32% w16% gap20
+16px lh1.25 ls0.000 w400 n2 cpl- x33% w19% gap-
+16px lh1.25 ls0.000 w700 n1 cpl- x18% w9% gap-
+## monzo 200 https://monzo.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(0, 0, 0)","fams":["MonzoSansText 511","MonzoSansDisplay 89"],"links":["Investor information > /investor-information","Information about our  > /information-about-current-account-services","FSCS information > /legal/fscs-information","App performance > /service-information"],"media":["2-97% 1.84","2-97% 1.84","4-27% 1.00","28-51% 1.00","28-51% 1.00","52-74% 1.00","76-98% 1.00","76-98% 1.00","100-122% 1.00","124-146% 1.00","48-87% 1.00","48-87% 1.00","130-169% 1.00","130-169% 1.00"],"secs":[868,977,977,1003,875,565,565,565,565,565,991,829],"h":15.2}
+1440px wide
+49px lh1.20 ls0.000 w800 n1 cpl24 x7% w43% gap-
+44px lh1.20 ls0.000 w800 n2 cpl21 x6% w87% gap24
+39px lh1.20 ls0.000 w800 n10 cpl18 x28% w41% gap32
+31px lh1.20 ls0.000 w700 n5 cpl16 x175% w33% gap-
+25px lh1.40 ls0.000 w700 n7 cpl- x28% w22% gap-
+25px lh1.20 ls0.000 w700 n7 cpl12 x37% w14% gap-
+25px lh1.10 ls0.000 w700 n3 cpl23 x16% w29% gap-
+24px lh1.40 ls0.000 w600 n1 cpl- x6% w44% gap16
+20px lh1.40 ls0.000 w400 n9 cpl43 x24% w44% gap16
+## citymapper 200 https://citymapper.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(255, 255, 255)","fams":["proxima-soft 189","system-ui 6"],"links":[],"media":["49-81% 1.15","55-77% 1.00","20-53% 3.00","53-75% 1.00","53-75% 0.96","17-38% 1.90","39-60% 1.90","61-82% 1.90","17-38% 1.90","39-60% 1.90","61-82% 1.90","17-38% 1.90","39-60% 1.90","61-82% 1.90"],"secs":[4055],"h":5.1}
+1440px wide
+40px lh1.10 ls0.000 w700 n4 cpl- x22% w31% gap-
+38px lh1.00 ls0.000 w700 n1 cpl- x37% w25% gap-
+20px lh1.40 ls0.000 w400 n5 cpl39 x22% w28% gap16
+19px lh1.25 ls0.000 w700 n11 cpl24 x40% w18% gap-
+16px lh1.25 ls0.000 w700 n3 cpl17 x24% w8% gap-
+16px lh1.25 ls0.000 w400 n11 cpl27 x40% w18% gap16
+14px lh1.25 ls0.015 w700 n1 cpl- x89% w9% gap-24
+13px lh1.50 ls0.000 w400 n2 cpl124 x2% w74% gap-
+## designmuseum 200 https://designmuseum.org/discover-design/all-stories/british-road-signs
+{"bg":"rgba(0, 0, 0, 0)","ink":"rgb(0, 0, 0)","fams":["sans-serif 408","din-pro 152","din-pro-alternate 4"],"links":["About > #","Learn more about this  > https://www.canva.com/policies/privacy-policy/","Learn more about this  > https://www.cloudflare.com/privacypolicy/","Learn more about this  > https://business.safety.google/privacy/","Learn more about this  > https://issuu.com/legal/privacy","Learn more about this  > https://privacy.microsoft.com/en-US/privacystatement","Learn more about this  > https://soundcloud.com/pages/privacy","Learn more about this  > https://www.acast.com/privacy","Learn more about this  > https://sketchfab.com/privacy","Learn more about this  > https://clickdimensions.com/about/privacy-policy/","Learn more about this  > https://www.tiktok.com/legal/privacy-policy","Learn more about this  > https://vimeo.com/privacy"],"media":["19-80% 1.62","80-141% 1.62","141
+1440px wide
+50px lh1.10 ls-0.040 w300 n1 cpl- x22% w26% gap-
+40px lh1.27 ls-0.025 w300 n3 cpl35 x83% w54% gap-
+30px lh1.20 ls0.000 w400 n1 cpl51 x29% w38% gap-93
+24px lh1.04 ls-0.042 w500 n2 cpl16 x24% w22% gap-
+15px lh1.60 ls0.017 w600 n1 cpl- x20% w59% gap-174
+15px lh1.60 ls0.033 w400 n1 cpl85 x20% w59% gap8
+15px lh1.60 ls0.033 w600 n1 cpl- x27% w8% gap7
+15px lh1.20 ls0.000 w400 n4 cpl35 x43% w17% gap5
+15px lh1.33 ls0.013 w400 n1 cpl45 x22% w36% gap-

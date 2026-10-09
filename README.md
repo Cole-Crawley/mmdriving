@@ -21,19 +21,23 @@ A nervous learner, or their parent, needs to trust an instructor before they'll 
 
 ## What I built
 
-- **One page, in the order a learner decides.** The page follows the questions people actually ask, in the order they ask them: who's teaching me, what lessons are there, what does it cost, how do I start, and how do I book.
-- **Booking is always one tap away.** The header carries "Call Now" and "Book a Lesson" and stays pinned while you scroll. On phones, a bar at the bottom of the screen does the same job.
-- **Pricing that points somewhere.** Three ways to pay, with the 10-hour block marked as best value, a separate test-day package, and the cancellation policy stated up front instead of in small print.
-- **Answers before they're asked.** An FAQ covers the worries people have before they pick up the phone: how many lessons they'll need, whether they need a provisional licence first, manual or automatic, and whether nervous drivers are welcome.
-- **A form that asks for just enough.** Lesson type and area are choices rather than free text, and an optional note has prompts like "I'm quite nervous" to make it easy to say what matters.
-- **Every town named.** Each area is spelled out rather than a vague "East Midlands", which helps local search and helps a parent spot their own town.
+- **One page, in the order a learner decides.** What this is and where, who is teaching me, what lessons there are, how I pay, whether you come to my town, what the whole process is, my worries, and how to book.
+- **The first screen is a road sign.** It says what, where and how to book, and nothing else.
+- **Booking is always one tap away.** The header carries the phone number and "Book a lesson". On phones, a bar at the bottom of the screen does the same job once the first button has scrolled away.
+- **Choosing carries through.** Pick a lesson or a way to pay anywhere on the page and it arrives in the enquiry form already filled in.
+- **A form that asks for just enough.** Name and phone number are needed; town, lesson and a note are optional. Mistakes are explained in plain words, and if sending fails nothing typed is lost.
+- **The whole road to a licence.** Five stops from provisional licence to after the test, with the official GOV.UK links, showing which parts are with the instructor.
+- **Every town named.** Drawn as the roundabout sign every learner has to read, and listed as text for search.
 
 ---
 
 ## Design decisions
 
-### Calm and competent over loud
-A deep instructional navy with a warm gold for anything you can press. It's a deliberate move away from the bright, saturated colours most local driving school sites use.
+### It looks like the road
+The whole site is built from the British road sign system: one typeface, green panels with a white inner line, a motorway gantry for the three ways to pay, countdown markers before the booking form. Every learner is studying these signs for their theory test, and the system was designed to be read at a glance by someone under pressure, which is exactly who is looking at this page. The research behind it, and a list of patterns the site is not allowed to use, are in [docs/REDESIGN-RESEARCH.md](docs/REDESIGN-RESEARCH.md).
+
+### Nothing is claimed that has not been confirmed
+There is no pass rate, no star rating, no "spaces left this week" and no prices on the page, because the client has not confirmed them yet. The page earns trust by being specific, useful and plain instead.
 
 ### Designing inside a real constraint
 There was no budget for a server, so there isn't one. The site is fully static and the enquiry form goes through Formspree. That one decision shaped everything else: no accounts, no personalisation, nothing that assumes infrastructure the client isn't paying for.

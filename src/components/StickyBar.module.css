@@ -1,0 +1,8 @@
+.bar { display: none; }
+
+@media (max-width: 860px) {
+  .bar { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 10px max(12px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-right)); background: var(--green); color: var(--white); border-top: 3px solid var(--white); transition: transform .35s var(--out); }
+  .bar :global(.btn) { min-height: 54px; }
+  .call { color: var(--white); }
+  .away { transform: translateY(110%); }
+}

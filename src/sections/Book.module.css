@@ -1,0 +1,54 @@
+.side { grid-column: 1 / 6; display: grid; gap: clamp(26px, 3vw, 44px); align-content: start; }
+
+/* motorway countdown markers: three bars, two, one, then the exit */
+.steps { display: grid; gap: 14px; }
+.steps li { display: flex; align-items: center; gap: clamp(16px, 1.8vw, 26px); }
+.steps p { max-width: 22em; }
+.steps b { font-weight: 800; }
+
+.direct { border-top: 2px solid var(--ink); }
+.direct div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.direct dt { font-size: var(--small); color: var(--mute); }
+.direct dd { display: grid; gap: 2px; overflow-wrap: anywhere; }
+.direct :global(.link) { display: inline-block; padding: 4px 0; }
+
+.formSign { grid-column: 7 / -1; padding: clamp(30px, 3.8vw, 60px) clamp(26px, 3.6vw, 56px); align-self: start; }
+.form { display: grid; gap: clamp(18px, 1.9vw, 26px); }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: end; }
+.pair .field { align-content: end; }
+
+.field { display: grid; gap: 6px; }
+.field label { font-weight: 800; font-size: var(--lead); line-height: 1.2; letter-spacing: -.01em; }
+.field label span { font-weight: 400; font-size: var(--small); color: var(--mute); letter-spacing: 0; }
+.hint { font-size: var(--small); color: var(--mute); }
+.field input, .field select, .field textarea { width: 100%; min-height: 54px; padding: 12px 14px; font-size: max(17px, var(--body)); background: var(--white); border: 3px solid var(--ink); border-radius: 6px; }
+.field textarea { resize: vertical; min-height: 104px; line-height: 1.4; }
+.field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 22px) 23px, calc(100% - 14px) 23px; background-size: 8px 8px; background-repeat: no-repeat; padding-right: 44px; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 4px solid var(--yellow); outline-offset: 0; box-shadow: none; }
+.picked { font-size: var(--small); color: var(--green); font-weight: 700; }
+
+/* errors: red is used for nothing else on the page except the L plate */
+.bad input { border-color: var(--red); }
+.bad { border-left: 5px solid var(--red); padding-left: 14px; }
+.error { color: var(--red); font-weight: 700; }
+.problems { border: 4px solid var(--red); border-radius: 6px; padding: 16px 18px; display: grid; gap: 8px; }
+.problems:focus { outline: 4px solid var(--yellow); outline-offset: 2px; }
+.problems a { color: var(--red); font-weight: 700; }
+.problems ul { display: grid; gap: 4px; }
+
+.note { color: var(--mute); text-align: center; }
+.dots::after { content: ''; display: inline-block; width: 1.2em; text-align: left; animation: dots 1.1s steps(4, end) infinite; }
+@keyframes dots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } }
+
+.done { display: grid; gap: 16px; justify-items: start; padding: clamp(8px, 2vw, 28px) 0; }
+.done:focus { outline: none; }
+.tick { position: relative; width: 76px; height: 76px; border-radius: 50%; background: var(--green); }
+.tick::after { content: ''; position: absolute; left: 27px; top: 15px; width: 20px; height: 36px; border: solid var(--white); border-width: 0 7px 7px 0; transform: rotate(42deg); }
+
+@media (max-width: 860px) {
+  .side, .formSign { grid-column: 1 / -1; }
+  .formSign { margin-top: 36px; padding: 28px 22px; }
+  .pair { grid-template-columns: 1fr; gap: 18px; }
+  .direct div { grid-template-columns: 1fr; gap: 0; }
+  .direct :global(.link) { padding: 9px 0; }
+}

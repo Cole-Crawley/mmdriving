@@ -3,38 +3,39 @@ export interface NavLink {
   href: string;
 }
 
-export interface Service {
-  icon: string;
-  title: string;
-  description: string;
-  badge?: string;
-}
-
-export interface PricingPlan {
-  id: string;
-  label: string;
-  priceTag: string;
-  description: string;
-  features: string[];
-  cta: string;
-  featured?: boolean;
-  wide?: boolean;
-  icon?: string;
-}
-
-export interface WhyItem {
-  number: string;
+export interface TeachingPoint {
   title: string;
   body: string;
 }
 
-export interface Testimonial {
-  initials: string;
+export interface Lesson {
   name: string;
-  location: string;
-  result: string;
+  /** The value sent with the enquiry form when someone asks about this lesson. */
+  value: string;
   body: string;
-  accent?: boolean;
+}
+
+export interface LessonGroup {
+  title: string;
+  lessons: Lesson[];
+}
+
+export interface PayOption {
+  id: string;
+  name: string;
+  summary: string;
+  body: string;
+  points: string[];
+  value: string;
+  recommended?: boolean;
+}
+
+export interface RouteStop {
+  title: string;
+  body: string;
+  /** True for the stops Mohammed takes you through himself. */
+  withMe?: boolean;
+  link?: { label: string; href: string };
 }
 
 export interface FaqItem {
@@ -42,19 +43,17 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface ContactDetail {
-  icon: string;
-  label: string;
-  value: string;
-  sub?: string;
-  href?: string;
+export interface Testimonial {
+  name: string;
+  location: string;
+  result: string;
+  body: string;
 }
 
 export interface FormState {
   name: string;
   phone: string;
-  email: string;
-  lessonType: string;
   area: string;
+  lessonType: string;
   message: string;
 }

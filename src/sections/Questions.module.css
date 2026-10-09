@@ -1,0 +1,22 @@
+.head { grid-column: 1 / 6; display: grid; gap: 18px; align-content: start; position: sticky; top: 112px; align-self: start; }
+.head :global(.link) { white-space: nowrap; }
+.list { grid-column: 7 / -1; border-top: 3px solid var(--ink); }
+
+.item { border-bottom: 1px solid var(--line); }
+.item summary { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px; padding: clamp(18px, 2vw, 28px) 0; cursor: pointer; list-style: none; font-size: clamp(21px, 2.1vw, 30px); font-weight: 800; line-height: 1.15; letter-spacing: -.018em; }
+.item summary::-webkit-details-marker { display: none; }
+.item p { padding: 0 0 clamp(22px, 2.4vw, 32px); max-width: 36em; color: var(--ink-2); }
+.item summary:hover span:first-child { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 5px; }
+
+/* the open and close mark is a plus drawn from two bars; one bar turns away when the answer is open */
+.sign { position: relative; width: 44px; height: 44px; border: 3px solid var(--ink); border-radius: 6px; background: var(--white); flex: none; }
+.sign::before, .sign::after { content: ''; position: absolute; left: 50%; top: 50%; width: 18px; height: 3px; background: var(--ink); transform: translate(-50%, -50%); transition: transform .3s var(--out); }
+.sign::after { transform: translate(-50%, -50%) rotate(90deg); }
+.item[open] .sign { background: var(--yellow); }
+.item[open] .sign::after { transform: translate(-50%, -50%) rotate(0deg); }
+
+@media (max-width: 860px) {
+  .head, .list { grid-column: 1 / -1; position: static; }
+  .list { margin-top: 30px; }
+  .head :global(.link) { display: inline-block; padding: 6px 0; }
+}

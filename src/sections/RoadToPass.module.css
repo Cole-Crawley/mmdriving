@@ -1,0 +1,21 @@
+/* a strip of tarmac with a dashed centre line down the left; each stop is a marker on the line */
+.road { grid-column: 1 / -1; position: relative; background: var(--tarmac); color: var(--white); border-radius: var(--corner); padding: clamp(18px, 2.4vw, 40px) clamp(22px, 3.4vw, 60px); font-weight: 500; }
+.road::before { content: ''; position: absolute; top: clamp(40px, 4.4vw, 72px); bottom: clamp(40px, 4.4vw, 72px); left: calc(clamp(22px, 3.4vw, 60px) + clamp(22px, 2.2vw, 30px) - 3px); width: 6px; background: repeating-linear-gradient(to bottom, var(--white) 0 22px, transparent 22px 40px); }
+
+.stop { position: relative; display: grid; grid-template-columns: clamp(44px, 4.4vw, 60px) minmax(0, 1fr) auto; column-gap: clamp(20px, 3vw, 48px); align-items: start; padding: clamp(20px, 2.4vw, 34px) 0; }
+.stop + .stop { border-top: 1px solid rgba(255, 255, 255, .22); }
+.marker { position: relative; z-index: 1; display: grid; place-items: center; width: clamp(44px, 4.4vw, 60px); aspect-ratio: 1; border-radius: 50%; background: var(--white); color: var(--ink); font-weight: 800; font-size: var(--lead); }
+.withMe .marker { background: var(--yellow); }
+.body { display: grid; gap: 8px; justify-items: start; max-width: 40em; }
+.body h3 { font-weight: 600; }
+.body p { color: rgba(255, 255, 255, .9); }
+.body :global(.link) { display: inline-block; padding: 10px 0; color: var(--white); font-weight: 600; }
+.who { font-size: var(--small); padding: 6px 10px; border-radius: 4px; white-space: nowrap; border: 2px solid rgba(255, 255, 255, .6); margin-top: 6px; }
+.withMe .who { background: var(--yellow); color: var(--ink); border-color: var(--yellow); font-weight: 800; }
+
+@media (max-width: 860px) {
+  .road { padding: 14px 18px; }
+  .road::before { left: calc(18px + 22px - 3px); top: 34px; bottom: 34px; }
+  .stop { grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; padding: 22px 0; }
+  .who { grid-column: 2; justify-self: start; margin-top: 12px; }
+}

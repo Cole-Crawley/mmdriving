@@ -1,0 +1,196 @@
+## smooth 200 https://smoothdrivingschool.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(46, 46, 46)","fams":["Rubik 172","Poppins 8","sans-serif 1"],"links":["About > /home#about"," > /home#about","Learn more > mailto:info@smoothdrivingschool.com","info@smoothdrivingscho > mailto:info@smoothdrivingschool.com"],"media":["0-99% 1.58","52-96% 1.50","0-40% 0.58","3-25% 1.50","27-49% 1.50","50-72% 1.50","74-96% 1.50","99-119% 1.50","123-142% 1.50","146-166% 1.50","170-190% 1.50","194-213% 1.50","0-99% 2.40"],"secs":[6309,900,905,990,990,736,1424,761,594,452],"h":7.5}
+1440px wide
+44px lh1.12 ls-0.010 w400 n1 cpl- x3% w93% gap-
+34px lh1.15 ls-0.010 w400 n1 cpl- x43% w53% gap-
+30px lh1.20 ls0.000 w300 n9 cpl16 x98% w21% gap-
+29px lh1.20 ls-0.010 w400 n1 cpl- x67% w29% gap-
+24px lh1.18 ls-0.010 w400 n2 cpl20 x35% w29% gap-
+18px lh1.50 ls0.000 w300 n15 cpl72 x45% w51% gap15
+18px lh1.44 ls0.000 w300 n5 cpl30 x28% w19% gap-
+17px lh1.20 ls0.020 w500 n1 cpl5 x3% w15% gap-
+15px lh1.50 ls0.000 w300 n2 cpl- x67% w46% gap15
+## rimmers 200 https://rimmersdrivingschool.squarespace.com
+{"bg":"rgb(255, 255, 255)","ink":"rgba(29, 29, 29, 0.7)","fams":["Roboto 57","Rubik 16","Arial 8"],"links":["About > /about","ABOUT > /about","LEARN MORE > /about","About > #about-1"],"media":["-3-102% 1.28","-120-21% 1.74","6-48% 1.42","51-93% 1.42"],"secs":[882,545,1035,873,1581,1026,1017],"h":8.2}
+1440px wide
+80px lh1.20 ls0.010 w300 n2 cpl13 x6% w43% gap-
+26px lh1.20 ls0.020 w400 n6 cpl48 x21% w43% gap-
+18px lh1.80 ls0.060 w300 n3 cpl56 x51% w43% gap26
+## ashs 200 https://ashsdrivingschool.squarespace.com
+{"bg":"rgb(246, 246, 244)","ink":"rgb(102, 102, 102)","fams":["Roboto 114"],"links":["ABOUT > /about","About > /about"," > /about","BOOK A LESSON > /about"],"media":["0-99% 2.37","-2-55% 1.50","14-85% 1.50"],"secs":[2509,601,781,584,347,503],"h":3.3}
+1440px wide
+24px lh1.32 ls-0.015 w700 n1 cpl- x5% w89% gap-
+23px lh1.30 ls-0.016 w400 n1 cpl40 x8% w28% gap-
+23px lh1.08 ls-0.020 w400 n3 cpl- x54% w14% gap-
+18px lh1.30 ls-0.020 w400 n14 cpl34 x54% w21% gap16
+16px lh1.44 ls-0.022 w400 n8 cpl80 x97% w18% gap-
+15px lh1.20 ls-0.024 w600 n1 cpl- x146% w8% gap-
+14px lh1.20 ls-0.020 w400 n1 cpl5 x-991% w9% gap-
+14px lh1.29 ls0.000 w700 n1 cpl- x82% w9% gap-
+14px lh1.20 ls0.050 w500 caps n1 cpl5 x61% w22% gap-
+## tofu 200 https://tofudriving.com
+{"bg":"rgba(0, 0, 0, 0)","ink":"rgb(23, 36, 60)","fams":["Hanken Grotesk Variable 246","Fraunces Variable 116"],"links":["About > /about"," > /about","About us > /about"],"media":["12-29% 1.00","32-48% 1.00","51-67% 1.00","70-87% 1.00","12-29% 1.00","32-48% 1.00","51-67% 1.00"],"secs":[900,394,2860,1204,1341,806],"h":9.1}
+1440px wide
+130px lh0.98 ls-0.070 w600 n1 cpl- x7% w54% gap-
+94px lh1.02 ls-0.015 w600 caps n28 cpl12 x440% w86% gap-189
+94px lh1.02 ls-0.015 w600 n5 cpl10 x17% w53% gap24
+48px lh1.25 ls-0.015 w600 n2 cpl18 x12% w47% gap16
+24px lh1.33 ls-0.015 w600 n3 cpl- x12% w22% gap-
+20px lh1.60 ls0.000 w400 n1 cpl58 x7% w40% gap11
+20px lh1.40 ls0.000 w600 n8 cpl- x39% w21% gap8
+18px lh1.78 ls0.000 w400 n6 cpl46 x17% w40% gap24
+18px lh1.56 ls0.000 w400 n1 cpl40 x29% w40% gap24
+## red 200 https://www.reddrivingschool.com
+{"bg":"rgb(247, 247, 247)","ink":"rgb(47, 47, 47)","fams":["sans-serif 383","gothamhtf-bookregular 149","Montserrat 34","gotham_htfblack 33"],"links":["About > #","Learn more about this  > https://www.cookiebot.com/goto/privacy-policy/","Learn more about this  > https://business.safety.google/privacy/","Learn more about this  > https://www.linkedin.com/legal/privacy-policy","Learn more about this  > https://www.hotjar.com/legal/policies/privacy/","Learn more about this  > https://privacy.microsoft.com/en-us/privacystatement","Learn more about this  > https://newrelic.com/termsandconditions/privacy","Learn more about this  > https://www.quantcast.com/privacy/","Learn more about this  > https://vimeo.com/privacy","Learn more about this  > https://www.facebook.com/policy.php/","Learn more about this  > https://www.feefo.com/business/gb_en/privacy-policy","Learn more about this  > https://pr
+1440px wide
+90px lh1.20 ls0.000 w900 n1 cpl- x18% w62% gap-
+70px lh1.20 ls0.000 w900 n1 cpl17 x2% w43% gap-
+69px lh1.20 ls0.000 w900 n1 cpl21 x13% w73% gap-
+55px lh1.20 ls0.000 w900 n4 cpl- x2% w32% gap-66
+40px lh1.10 ls0.000 w500 n6 cpl19 x36% w36% gap-
+36px lh1.00 ls0.000 w700 n2 cpl15 x31% w22% gap-108
+25px lh1.20 ls0.000 w900 caps n14 cpl13 x8% w23% gap-
+25px lh1.50 ls0.000 w700 n2 cpl36 x52% w41% gap-
+24px lh1.50 ls0.000 w400 n1 cpl37 x2% w39% gap-
+## pullup 200 https://pullupdrivingschool.co.uk
+{"bg":"rgb(255, 255, 255)","ink":"rgb(6, 6, 6)","fams":["Arial 146","PT Sans 18","AR One Sans 10"],"links":["About Us > https://pullupdrivingschool.co.uk/about-us/","About us > https://pullupdrivingschool.co.uk/about-us/"," > mailto:info@pullupdrivingschool.co.uk"],"media":["0-99% 1.78","9-35% 1.19","9-49% 1.90","50-90% 1.90","-130--104% 1.19","-103--76% 1.19","-75--48% 1.19","-47--21% 1.19","-19-7% 1.19","9-35% 1.19","36-63% 1.19","64-90% 1.19","92-118% 1.19","120-146% 1.19"],"secs":[548,436,422,647,483],"h":3.1}
+1440px wide
+31px lh1.30 ls0.000 w700 n1 cpl- x9% w82% gap-
+23px lh1.30 ls0.000 w400 n1 cpl- x9% w82% gap-
+20px lh1.20 ls0.000 w400 n1 cpl- x9% w82% gap-
+19px lh1.30 ls0.000 w700 n1 cpl- x9% w40% gap-
+17px lh1.76 ls0.000 w400 n2 cpl- x61% w10% gap-19
+16px lh1.50 ls0.000 w400 n13 cpl44 x34% w40% gap20
+15px lh1.23 ls0.000 w400 n2 cpl93 x84% w67% gap-
+## stepin 200 https://stepindrive.co.uk
+{"bg":"rgb(255, 255, 255)","ink":"rgb(26, 26, 26)","fams":["DM Sans 164","Syne 34"],"links":["About Us > /about-us/","About Us > https://stepindrive.co.uk/about-us/","info@stepindrive.co.uk > mailto:info@stepindrive.co.uk"],"media":["9-35% 2.17"],"secs":[900,690,264,786,586,614,985,778,1035],"h":8.2}
+1440px wide
+44px lh1.15 ls0.000 w700 n4 cpl- x10% w79% gap14
+40px lh1.18 ls0.000 w700 n1 cpl14 x10% w37% gap14
+40px lh1.20 ls0.000 w700 n1 cpl- x23% w53% gap16
+21px lh1.20 ls0.000 w500 n1 cpl23 x63% w21% gap10
+19px lh1.65 ls0.010 w300 n1 cpl- x10% w79% gap26
+18px lh1.20 ls0.000 w400 n1 cpl- x12% w74% gap12
+18px lh1.65 ls0.000 w700 n4 cpl- x51% w15% gap14
+17px lh1.20 ls0.000 w500 n1 cpl- x63% w21% gap10
+17px lh1.65 ls0.000 w700 n3 cpl- x43% w17% gap-
+## kruzee 200 https://kruzee.com
+{"bg":"rgb(255, 255, 255)","ink":"rgb(50, 50, 50)","fams":["Inter 572","Arial 24","Bricolage Grotesque 3","inter 1"],"links":["About > https://kruzee.com/about/"," > https://kruzee.com/about/","Learn more about how w > #elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE5MDgzIiwidG9nZ2xlIjpmYWxzZX0%3D"],"media":["51-100% 0.91","19-36% 1.00","8-26% 1.02","54-72% 1.02","62-83% 1.02","73-90% 1.02","119-136% 1.02","146-164% 1.02","174-192% 1.02","-17-20% 1.26","24-59% 1.20","64-99% 0.97","-9-31% 0.87","-5-35% 0.87"],"secs":[],"h":14.4}
+1440px wide
+64px lh1.20 ls-0.010 w800 n2 cpl15 x32% w42% gap0
+64px lh1.20 ls-0.031 w800 n2 cpl26 x27% w86% gap-
+64px lh1.20 ls0.000 w800 n2 cpl20 x6% w88% gap-
+48px lh1.20 ls-0.010 w800 n4 cpl17 x7% w40% gap0
+48px lh1.10 ls-0.029 w800 n1 cpl26 x7% w42% gap-
+40px lh1.20 ls-0.037 w800 n1 cpl20 x7% w36% gap-
+40px lh1.20 ls0.000 w800 n1 cpl- x29% w23% gap-
+28px lh1.21 ls0.000 w800 n3 cpl18 x38% w25% gap-
+24px lh1.20 ls0.000 w800 n8 cpl14 x53% w16% gap-
+## drivisa 200 https://drivisa.com
+{"bg":"rgb(247, 246, 243)","ink":"rgb(26, 26, 31)","fams":["sans 534","display 66"],"links":["About > /about","info@drivisa.com > mailto:info@drivisa.com","About Us > /about"],"media":["-15-114% 1.59","56-92% 0.80","50-95% 1.33","5-34% 2.38","35-64% 2.38","65-95% 2.38","5-34% 1.50","35-64% 1.50","66-95% 1.50","60-77% 0.57","64-82% 0.54","5-95% 2.14"],"secs":[1170,746,208,1228,508,985,463,252,1369,915,664,731],"h":12.7}
+1440px wide
+64px lh1.03 ls-0.022 w700 n1 cpl19 x23% w53% gap24
+54px lh1.03 ls-0.022 w700 n6 cpl18 x26% w47% gap-
+48px lh1.03 ls-0.022 w700 n1 cpl18 x9% w39% gap-
+24px lh1.33 ls0.000 w600 n2 cpl- x52% w41% gap12
+21px lh1.62 ls0.000 w500 n1 cpl44 x5% w40% gap28
+20px lh1.40 ls0.000 w600 n3 cpl- x37% w26% gap-
+18px lh1.63 ls0.000 w400 n1 cpl46 x5% w36% gap24
+18px lh1.63 ls0.000 w600 n1 cpl18 x5% w35% gap-
+18px lh1.56 ls0.000 w600 n14 cpl- x43% w24% gap20
+## ltrent 200 https://www.ltrent.com.au
+{"bg":"rgb(255, 255, 255)","ink":"rgb(71, 85, 105)","fams":["Isidora Sans 382","quotes-script 11"],"links":["About > https://www.ltrent.com.au/about-us/","Learn More > /about-us/","About LTrent > https://www.ltrent.com.au/about-us/","Trent Method > /about-us/the-trent-method/"],"media":["51-95% 1.34","5-24% 0.76","28-47% 0.69","50-69% 0.68","72-92% 0.70","5-27% 1.00"],"secs":[],"h":7.9}
+1440px wide
+101px lh1.00 ls0.001 w600 n1 cpl- x15% w69% gap-
+100px lh1.05 ls0.001 w600 n1 cpl15 x5% w67% gap-
+72px lh1.00 ls0.001 w600 n1 cpl15 x15% w69% gap-
+48px lh1.21 ls0.002 w600 n5 cpl14 x36% w37% gap-
+40px lh1.20 ls0.003 w600 n5 cpl48 x5% w60% gap15
+24px lh1.25 ls0.004 w700 n6 cpl15 x42% w23% gap-
+20px lh1.50 ls0.005 w400 n16 cpl60 x27% w16% gap14
+20px lh1.50 ls0.000 w400 n10 cpl79 x95% w64% gap-
+18px lh1.00 ls0.000 w700 n1 cpl- x28% w10% gap-
+## coastline 200 https://coastlineacademy.com
+{"bg":"rgb(250, 250, 250)","ink":"rgb(33, 33, 33)","fams":["Poppins 288","Arial 2"],"links":["Our Story > /article/about-coastline-academy"],"media":["51-97% 1.78"],"secs":[892,288,955,630,502,626,676,286,1369],"h":8.6}
+1440px wide
+66px lh1.05 ls0.000 w700 n1 cpl15 x9% w38% gap8
+48px lh1.20 ls0.000 w700 n1 cpl17 x11% w35% gap-
+34px lh1.24 ls0.000 w700 n5 cpl- x2% w96% gap8
+34px lh1.00 ls0.000 w400 n1 cpl38 x7% w85% gap-
+34px lh1.24 ls0.000 w600 n2 cpl- x2% w96% gap-
+24px lh1.15 ls0.000 w800 n1 cpl- x53% w35% gap6
+20px lh1.60 ls0.000 w500 n12 cpl52 x13% w34% gap12
+20px lh1.60 ls0.000 w700 n10 cpl- x18% w63% gap-
+20px lh1.60 ls0.000 w400 n1 cpl- x53% w42% gap11
+## aceable 200 https://www.aceable.com
+{"bg":"rgba(0, 0, 0, 0)","ink":"rgb(0, 0, 0)","fams":["Nunito Sans 165"],"links":[],"media":["40-112% 1.79","51-88% 1.00","10-48% 0.99","51-89% 1.02","37-62% 1.88","64-89% 1.88"],"secs":[],"h":4.4}
+1440px wide
+48px lh1.25 ls0.000 w900 n1 cpl21 x10% w38% gap-
+32px lh1.25 ls0.000 w800 n3 cpl16 x12% w36% gap-
+24px lh1.25 ls0.000 w800 n2 cpl24 x65% w22% gap8
+20px lh1.50 ls0.000 w400 n1 cpl- x10% w38% gap-
+18px lh1.50 ls0.000 w400 n8 cpl32 x39% w22% gap12
+16px lh1.50 ls0.000 w400 n1 cpl- x8% w17% gap-
+16px lh1.13 ls0.000 w800 n1 cpl- x12% w8% gap-
+14px lh1.30 ls0.000 w700 n1 cpl21 x72% w11% gap-36
+14px lh1.50 ls0.000 w800 n1 cpl- x10% w40% gap-
+## aa 200 https://www.theaa.com/driving-school/driving-lessons
+{"bg":"rgb(246, 246, 246)","ink":"rgb(33, 37, 45)","fams":["NewTransport 282","Arial 130","NewTransportLight 10","NewTransport-Bold 10"],"links":["Car history check > /vehicle-check","About us > /about-us","Gender pay gap > /about-us/gender-pay-gap","More information > https://cookiepedia.co.uk/giving-consent-to-cookies"],"media":[],"secs":[2225,445,425],"h":2.9}
+1440px wide
+26px lh1.38 ls-0.005 w300 n2 cpl- x11% w78% gap8
+24px lh1.33 ls-0.025 w700 n1 cpl- x13% w72% gap-
+24px lh1.17 ls-0.021 w700 n2 cpl- x51% w33% gap-
+24px lh1.25 ls0.000 w700 n1 cpl- x66% w26% gap0
+18px lh1.11 ls0.030 w700 n2 cpl9 x39% w20% gap-
+18px lh2.67 ls0.030 w700 n2 cpl- x51% w20% gap-
+16px lh1.30 ls0.016 w400 n4 cpl- x52% w32% gap-
+16px lh1.38 ls0.025 w700 n3 cpl- x17% w12% gap-
+16px lh1.38 ls0.000 w700 n8 cpl- x39% w14% gap-
+## passmefast 200 https://www.passmefast.co.uk
+{"bg":"rgba(0, 0, 0, 0)","ink":"rgb(0, 0, 0)","fams":["sans-serif 573","__inter_b1e524 27"],"links":["About > #","Learn more about this  > https://www.cookiebot.com/goto/privacy-policy/","Learn more about this  > https://crisp.chat/en/privacy/","Learn more about this  > https://business.safety.google/privacy/","Learn more about this  > https://prismic.io/legal/privacy","Learn more about this  > https://www.studentbeans.com/dk/info/privacy","Learn more about this  > https://www.youthdiscount.com/youth_id/terms/privacy_policy","Learn more about this  > https://www.hotjar.com/legal/policies/privacy/","Learn more about this  > https://www.mapbox.com/legal/privacy/","Learn more about this  > https://privacy.microsoft.com/en-us/privacystatement","Learn more about this  > https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy","Learn more about this  > https://www
+1440px wide
+56px lh1.00 ls0.000 w700 caps n1 cpl10 x7% w41% gap-
+36px lh1.11 ls0.000 w700 n1 cpl13 x7% w36% gap-
+24px lh1.33 ls0.000 w700 caps n7 cpl39 x7% w49% gap-28
+24px lh1.00 ls0.000 w600 n3 cpl- x37% w24% gap20
+24px lh1.00 ls0.000 w700 n9 cpl- x38% w24% gap-
+20px lh1.50 ls0.000 w700 n1 cpl- x13% w31% gap-
+20px lh1.40 ls0.000 w700 n1 cpl- x47% w14% gap-
+20px lh1.40 ls0.000 w600 n12 cpl- x8% w26% gap-
+18px lh1.56 ls0.000 w400 n32 cpl106 x8% w82% gap12
+## bsm 200 https://www.bsm.co.uk
+{"bg":"rgb(255, 255, 255)","ink":"rgb(33, 37, 41)","fams":["Titillium Web 109","Arial 23","neue-haas-unica 9"],"links":["More information > https://cookiepedia.co.uk/giving-consent-to-cookies"],"media":[],"secs":[717,950,1072,314,256],"h":3.9}
+1440px wide
+48px lh1.20 ls0.000 w700 n1 cpl- x9% w40% gap8
+28px lh1.20 ls0.000 w600 n2 cpl- x23% w53% gap-
+24px lh1.30 ls0.000 w700 n1 cpl- x11% w14% gap-
+20px lh1.50 ls0.000 w100 n1 cpl120 x9% w81% gap-
+16px lh1.50 ls0.000 w400 n9 cpl47 x19% w33% gap8
+16px lh1.31 ls0.000 w400 n1 cpl74 x11% w43% gap16
+16px lh1.31 ls0.000 w700 n1 cpl- x28% w8% gap-
+15px lh1.50 ls0.000 w700 n2 cpl10 x44% w12% gap-
+15px lh2.75 ls0.000 w400 n5 cpl- x30% w7% gap-
+## billplant 200 https://www.billplant.co.uk
+{"bg":"rgb(255, 255, 255)","ink":"rgb(55, 55, 55)","fams":["Karla 394","gelica 9"],"links":[],"media":["54-104% 1.00","59-103% 1.24","-4-40% 1.12","59-103% 1.24","1-31% 2.00","34-65% 2.00","67-98% 2.00","101-131% 2.00","1-31% 2.00","34-65% 2.00","67-98% 2.00","101-131% 2.00","134-164% 2.00","9-40% 1.10"],"secs":[6223,803,276,700,700,700,1161,985,219,678],"h":7.6}
+1440px wide
+65px lh1.05 ls-0.015 w700 n1 cpl- x1% w48% gap-
+55px lh1.05 ls-0.018 w700 n6 cpl22 x18% w47% gap16
+30px lh1.33 ls0.000 w800 n9 cpl- x36% w30% gap32
+24px lh1.17 ls-0.042 w700 n6 cpl- x65% w12% gap-
+20px lh1.20 ls-0.050 w800 n2 cpl8 x15% w48% gap553
+20px lh1.40 ls-0.050 w500 n6 cpl13 x51% w31% gap-66
+20px lh1.60 ls0.000 w400 n4 cpl- x51% w17% gap-
+18px lh1.33 ls0.000 w700 n1 cpl- x2% w95% gap-
+16px lh1.60 ls0.000 w500 n28 cpl52 x51% w30% gap16
+## zutobi 200 https://zutobi.com/uk
+{"bg":"rgba(0, 0, 0, 0)","ink":"rgb(0, 0, 0)","fams":["Lato 372"],"links":["About us > https://zutobi.com/uk/about"],"media":["13-86% 1.53","51-86% 0.78","13-48% 0.80","51-87% 0.74","13-49% 0.78","51-87% 0.76","-1-99% 2.02"],"secs":[8547,868],"h":9.5}
+1440px wide
+48px lh1.00 ls-0.005 w800 n7 cpl12 x25% w28% gap40
+42px lh1.14 ls-0.012 w800 n1 cpl- x38% w23% gap-
+20px lh1.40 ls-0.020 w500 n5 cpl21 x32% w17% gap19
+18px lh1.33 ls0.000 w700 n2 cpl- x68% w27% gap-
+18px lh1.44 ls0.000 w500 n5 cpl44 x19% w28% gap20
+18px lh1.22 ls-0.024 w900 n2 cpl- x40% w20% gap12
+18px lh1.44 ls-0.013 w800 n1 cpl- x13% w17% gap-
+16px lh1.19 ls-0.024 w500 n7 cpl73 x40% w20% gap-
+16px lh1.19 ls-0.024 w400 n4 cpl- x65% w20% gap9

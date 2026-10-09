@@ -1,0 +1,20 @@
+.stack { grid-column: 1 / -1; padding: clamp(26px, 3.4vw, 52px) clamp(24px, 3.6vw, 60px); }
+.group + .group { margin-top: clamp(20px, 2.6vw, 36px); }
+.groupTitle { font-size: var(--small); font-weight: 500; letter-spacing: 0; color: var(--mute); padding-bottom: 10px; border-bottom: 3px solid var(--ink); }
+
+.row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) auto; align-items: center; column-gap: var(--gap); padding: clamp(16px, 1.8vw, 26px) 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: background-color .2s linear, padding .3s var(--out); }
+.name { font-size: clamp(24px, 2.8vw, 42px); font-weight: 800; line-height: 1.05; letter-spacing: -.025em; }
+.body { color: var(--ink-2); max-width: 34em; }
+.ask { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; white-space: nowrap; }
+.arrow { width: 18px; height: 24px; transition: transform .3s var(--out); }
+/* the row answers the pointer the way a sign points: it turns yellow and the arrow moves on */
+.row:hover, .row:focus-visible { background: var(--yellow); padding-inline: 14px; }
+.row:hover .arrow, .row:focus-visible .arrow { transform: rotate(90deg) translateY(-6px) !important; }
+.row:hover .body, .row:focus-visible .body { color: var(--ink); }
+
+@media (max-width: 860px) {
+  .stack { padding: 26px 22px; }
+  .row { grid-template-columns: 1fr; row-gap: 6px; padding: 18px 0; }
+  .ask { margin-top: 6px; min-height: 28px; }
+  .row:hover, .row:focus-visible { padding-inline: 10px; }
+}

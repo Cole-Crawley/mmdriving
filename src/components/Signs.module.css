@@ -1,0 +1,19 @@
+.lplate { width: 100%; height: auto; }
+
+.countdown { width: clamp(64px, 7vw, 104px); height: auto; flex: none; }
+:global(.js) .bar { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0); transition: transform .6s var(--out); transition-delay: calc(.25s + var(--i) * 120ms); }
+:global(.js .is-up) .bar { transform: none; }
+
+.roundabout { width: 100%; height: auto; overflow: visible; }
+.name { font: 500 32px/1 var(--font); letter-spacing: -.01em; }
+/* the roads draw outward from the roundabout, then each name appears at the end of its road */
+:global(.js) .arm { stroke-dasharray: 260; stroke-dashoffset: 260; transition: stroke-dashoffset .8s var(--out); transition-delay: calc(.3s + var(--i) * 110ms); }
+:global(.js .is-up) .arm { stroke-dashoffset: 0; }
+:global(.js) .name { opacity: 0; transition: opacity .4s linear; transition-delay: calc(.8s + var(--i) * 110ms); }
+:global(.js .is-up) .name { opacity: 1; }
+
+.centre { height: clamp(56px, 9vw, 120px); width: 10px; margin: clamp(40px, 6vw, 88px) auto 0; background: repeating-linear-gradient(to bottom, var(--ink) 0 26px, transparent 26px 46px); opacity: .9; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bar, .arm, .name { transform: none; stroke-dashoffset: 0; opacity: 1; }
+}
