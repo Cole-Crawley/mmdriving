@@ -9,11 +9,11 @@
 /* the roads draw outward from the roundabout, then each name appears at the end of its road */
 :global(.js) .arm { stroke-dasharray: 260; stroke-dashoffset: 260; transition: stroke-dashoffset .8s var(--out); transition-delay: calc(.3s + var(--i) * 110ms); }
 :global(.js .is-up) .arm { stroke-dashoffset: 0; }
-:global(.js) .name { opacity: 0; transition: opacity .4s linear; transition-delay: calc(.8s + var(--i) * 110ms); }
-:global(.js .is-up) .name { opacity: 1; }
+:global(.js) .name { clip-path: inset(0 100% 0 0); transition: clip-path .5s cubic-bezier(.45, 0, .15, 1); transition-delay: calc(.9s + var(--i) * 110ms); }
+:global(.js .is-up) .name { clip-path: inset(-10px); }
 
 .centre { height: clamp(56px, 9vw, 120px); width: 10px; margin: clamp(40px, 6vw, 88px) auto 0; background: repeating-linear-gradient(to bottom, var(--ink) 0 26px, transparent 26px 46px); opacity: .9; }
 
 @media (prefers-reduced-motion: reduce) {
-  .bar, .arm, .name { transform: none; stroke-dashoffset: 0; opacity: 1; }
+  .bar, .arm, .name { transform: none; stroke-dashoffset: 0; opacity: 1; clip-path: none; }
 }

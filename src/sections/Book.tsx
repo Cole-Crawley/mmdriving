@@ -116,10 +116,10 @@ export default function Book() {
       <div className="grid">
         <div className={styles.side}>
           <h2>Book a first lesson</h2>
-          <ol className={`${styles.steps} put-up`}>
-            <li><Countdown bars={3} /><p><b>Send this form</b>, or message or call me. It takes about a minute.</p></li>
-            <li><Countdown bars={2} /><p><b>I get back to you</b> {reply} for a quick chat about where you are starting from.</p></li>
-            <li><Countdown bars={1} /><p><b>We book your first lesson</b> at a time that suits you. Have your provisional licence ready.</p></li>
+          <ol className={styles.steps}>
+            <li className="rise" style={{ ['--i' as string]: 0 }}><Countdown bars={3} /><p><b>Send this form</b>, or message or call me. It takes about a minute.</p></li>
+            <li className="rise" style={{ ['--i' as string]: 1 }}><Countdown bars={2} /><p><b>I get back to you</b> {reply} for a quick chat about where you are starting from.</p></li>
+            <li className="rise" style={{ ['--i' as string]: 2 }}><Countdown bars={1} /><p><b>We book your first lesson</b> at a time that suits you. Have your provisional licence ready.</p></li>
           </ol>
 
           {/* Most people under 35 would rather message than fill in a form or make a call, so that route is given equal weight. */}

@@ -9,8 +9,8 @@
 .also { grid-column: 1 / -1; grid-row: 2; margin-top: clamp(18px, 2.2vw, 34px); font-size: clamp(19px, 2.3vw, 34px); line-height: 1.2; letter-spacing: -.012em; max-width: 30em; }
 
 .plate { grid-column: 2; grid-row: 1; width: clamp(64px, 11vw, 172px); transform: rotate(4deg); align-self: start; }
-:global(.js) .plate { transform: rotate(-14deg) scale(.6); opacity: 0; transition: transform .8s var(--out) .55s, opacity .3s linear .55s; }
-:global(.js .is-up) .plate { transform: rotate(4deg); opacity: 1; }
+:global(.js) .plate { transform: rotate(-16deg) scale(0); transition: transform .7s cubic-bezier(.3, 1.3, .5, 1) .75s; }
+:global(.js .is-up) .plate { transform: rotate(4deg); }
 
 .foot { grid-column: 1 / -1; grid-row: 3; align-self: end; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: clamp(24px, 4vw, 64px); margin-top: clamp(40px, 6vw, 96px); padding-top: clamp(20px, 2.4vw, 32px); border-top: var(--border) solid var(--white); }
 .intro { max-width: 30em; }
