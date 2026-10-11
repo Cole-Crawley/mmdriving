@@ -90,6 +90,16 @@
     }
     </script>
 
+    <!-- Signs are hidden from the very first frame, so the first sign is never drawn once and then put up again.
+         If the page script has not started the signs soon after loading, everything is shown instead. -->
+    <script>
+      (function (d) {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+        d.classList.add('js');
+        addEventListener('load', function () { setTimeout(function () { if (!window.__signs) d.classList.remove('js'); }, 1500); });
+      })(document.documentElement);
+    </script>
+
     <!-- Analytics: Vercel Web Analytics, which uses no cookies. It only loads on the live site, never on a
          developer's computer, so a missing script can not cause an error there. -->
     <script>

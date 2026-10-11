@@ -10,21 +10,44 @@ export function useSigns() {
     const root = document.documentElement;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
     root.classList.add('js');
+    (window as unknown as { __signs?: number }).__signs = 1;
 
     const targets = () => Array.from(document.querySelectorAll<HTMLElement>('.put-up, .rise'));
-    const up = (el: Element) => el.classList.add('is-up');
+    // A sign that leaves the screen before its movement has finished (a fast scroll, or a jump that glides past it)
+    // is taken down again while it is off screen, so it goes up properly when it is scrolled back to. Once it has
+    // been up for the whole movement it stays up for good and is no longer watched.
+    const SETTLE = 1900;
+    const settling = new Map<Element, number>();
+    const gone = (el: Element) => { const r = el.getBoundingClientRect(); return r.bottom <= 0 || r.top >= window.innerHeight; };
+    const up = (el: Element) => { if (!el.classList.contains('is-up')) { el.classList.add('is-up'); settling.set(el, performance.now()); } };
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) { up(e.target); io.unobserve(e.target); } }),
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) up(e.target); }),
       // a sign goes up once its top is a fifth of the way up the screen, so the movement is seen and not missed
       { rootMargin: '0px 0px -20% 0px' },
     );
     targets().forEach((el) => io.observe(el));
+    const settle = () => settling.forEach((at, el) => {
+      const early = performance.now() - at < SETTLE;
+      if (gone(el) && early) { el.classList.remove('is-up'); settling.delete(el); }
+      else if (!early) { settling.delete(el); if (gone(el)) el.classList.remove('is-up'); else io.unobserve(el); }
+    });
+    let queued = false;
+    const onScroll = () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; settle(); }); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    // the safety net uses the same line as the observer, so it can never put a sign up early and steal the animation
-    const net = () => targets().forEach((el) => { if (el.getBoundingClientRect().top < window.innerHeight * 0.8) up(el); });
+    // the safety net uses the same line as the observer, so it can never put a sign up early and steal the animation,
+    // and it only puts up signs that are on screen now: anything a fast scroll or a jump skipped past stays down
+    // and goes up as it is scrolled back to, instead of already standing there
+    const onScreen = (el: Element) => { const r = el.getBoundingClientRect(); return r.top < window.innerHeight * 0.8 && r.bottom > 0; };
+    const net = () => { settle(); targets().forEach((el) => { if (onScreen(el)) up(el); }); };
+    // Once scrolling has stopped, anything with any part on screen goes up, even below the line: at the foot of the
+    // page there is no more scrolling to lift it, and a sign must never stay down while it can be seen.
+    const atRest = () => { settle(); targets().forEach((el) => { if (!gone(el)) up(el); }); };
     let checks = 0;
     const timer = window.setInterval(() => { net(); if (++checks > 8) window.clearInterval(timer); }, 1200);
-    const later = () => window.setTimeout(net, 900);
+    let rest = 0;
+    const later = () => { window.clearTimeout(rest); rest = window.setTimeout(atRest, 700); };
+    window.addEventListener('load', later);
     window.addEventListener('scroll', later, { passive: true });
     window.addEventListener('resize', later);
     window.addEventListener('pageshow', later);
@@ -32,7 +55,10 @@ export function useSigns() {
 
     return () => {
       io.disconnect();
+      window.removeEventListener('scroll', onScroll);
       window.clearInterval(timer);
+      window.clearTimeout(rest);
+      window.removeEventListener('load', later);
       window.removeEventListener('scroll', later);
       window.removeEventListener('resize', later);
       window.removeEventListener('pageshow', later);
