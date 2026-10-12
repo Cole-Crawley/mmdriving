@@ -88,16 +88,20 @@ src/
 
 ## Screenshots
 
-Every lesson type explained in a sentence:
+Six kinds of lesson set out like a stack sign, one destination per row:
 
-![Services](docs/mm-services.webp)
+![Lessons](docs/mm-lessons.webp)
 
-Pricing with one clear recommendation and no hidden terms:
+Three ways to pay as a motorway gantry, with one clear recommendation and no hidden terms:
 
-![Pricing](docs/mm-pricing.webp)
+![Ways to pay](docs/mm-pay.webp)
 
-The FAQ answers a nervous learner's worries before they have to call:
+The road from provisional licence to passed, and which stops are with the instructor:
 
-![FAQ](docs/mm-faq.webp)
+![The road to passing](docs/mm-road.webp)
+
+The questions a nervous learner, or a parent, has before they call:
+
+![Questions](docs/mm-questions.webp)
 
 *Designed and built by [Cole Crawley](https://colecrawley.com).*
