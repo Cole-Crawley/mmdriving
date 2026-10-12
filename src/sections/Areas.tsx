@@ -8,7 +8,7 @@ export default function Areas() {
   return (
     <section id="areas" className="section wrap">
       <div className="grid">
-        <div className={`sign put-up ${styles.sign}`}>
+        <div className={`sign put-up paint ${styles.sign}`}>
           <Roundabout />
         </div>
 

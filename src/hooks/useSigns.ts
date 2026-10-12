@@ -63,11 +63,11 @@ export function useSigns() {
     };
     const down = (el: Element) => { (el as HTMLElement).style.transitionDelay = '0ms'; el.classList.remove('is-up'); };
     // Cole's scroll recording (12 Oct) showed things sitting blank for 0.3 to 1.3s while they waited for a line a
-    // fifth (or half) of the way up the screen. Everything now starts as soon as it is a little way into view.
-    const line = (_el: Element) => 0.92;
+    // fifth (or half) of the way up the screen. Everything now starts once it is about 24px into view.
+    const line = (_el: Element) => 1 - 24 / window.innerHeight;
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting && e.boundingClientRect.top < window.innerHeight * line(e.target)) up(e.target); }),
-      { rootMargin: '0px 0px -8% 0px' },
+      { rootMargin: '0px 0px -24px 0px' },
     );
     targets().forEach((el) => io.observe(el));
     const settle = () => settling.forEach((at, el) => {

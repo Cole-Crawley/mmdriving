@@ -11,7 +11,8 @@ export default function Hero() {
   const others = TOWNS.filter((t) => !t.home).map((t) => t.name);
   return (
     <section id="top" className={`wrap ${styles.hero}`}>
-      <div className={`sign put-up ${styles.sign}`}>
+      {/* the first sign is simply there when the page opens (Cole, 12 Oct): no reveal, nothing to wait for */}
+      <div className={`sign ${styles.sign}`}>
         <div className={styles.plate}><LPlate /></div>
 
         <h1 className={styles.title}>
