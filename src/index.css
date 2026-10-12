@@ -147,6 +147,8 @@ p { text-wrap: pretty; }
 /* once uncovered the clip is removed altogether (inset by a negative amount), so focus rings and anything that
    sticks out past the edge are never cut */
 .js .rise.is-up { transform: none; clip-path: inset(-40px); }
+/* put up without movement: signs that come into view from above (scrolling back up, or after a jump) */
+.no-anim, .no-anim * { transition: none !important; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .put-up, .js .rise, .js .drop { clip-path: none; opacity: 1; transform: none; }

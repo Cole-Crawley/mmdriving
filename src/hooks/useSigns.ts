@@ -13,11 +13,10 @@ export function useSigns() {
     (window as unknown as { __signs?: number }).__signs = 1;
 
     const targets = () => Array.from(document.querySelectorAll<HTMLElement>('.put-up, .rise, .drop'));
-    // A sign that leaves the screen before its movement has finished (a fast scroll, or a jump that glides past it)
-    // is taken down again while it is off screen, so it goes up properly when it is scrolled back to. Once it has
-    // been up for the whole movement it stays up for good and is no longer watched.
-    const SETTLE = 3400;
-    const settling = new Map<Element, number>();
+    // Every sign goes up once, on the way down, and then stays up for good (Cole, 12 Oct: replaying on the way back up
+    // was too much). Anything that comes into view from the top of the screen instead (scrolling back up, or after a
+    // jump down the page) is simply there: it is put up with its movement switched off for a moment.
+    const all = targets();
     const gone = (el: Element) => { const r = el.getBoundingClientRect(); return r.bottom <= 0 || r.top >= window.innerHeight; };
     // Things that reach the line in the same moment (a row of lanes, the first rows of a list) go up one after
     // another in reading order; anything that arrives on its own goes up straight away.
@@ -44,7 +43,6 @@ export function useSigns() {
         el.style.transitionDelay = withSign.has(el) ? `${450 + Math.min(inSign++, 4) * 180}ms` : `${Math.min(k, 4) * 120}ms`;
         withSign.delete(el);
         el.classList.add('is-up');
-        settling.set(el, performance.now());
       });
     };
     const up = (el: Element) => {
@@ -61,7 +59,10 @@ export function useSigns() {
       // the next frame, or a tenth of a second if frames are paused (a tab in the background), whichever is first
       if (!flushing) { flushing = true; requestAnimationFrame(flush); window.setTimeout(flush, 100); }
     };
-    const down = (el: Element) => { (el as HTMLElement).style.transitionDelay = '0ms'; el.classList.remove('is-up'); };
+    const place = (el: HTMLElement) => {
+      el.style.transitionDelay = '0ms'; el.classList.add('no-anim', 'is-up'); void el.offsetWidth;
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('no-anim')));
+    };
     // Cole's scroll recording (12 Oct) showed things sitting blank for 0.3 to 1.3s while they waited for a line a
     // fifth (or half) of the way up the screen. Everything now starts once it is about 24px into view.
     const line = () => 1 - 24 / window.innerHeight;
@@ -70,16 +71,11 @@ export function useSigns() {
       { rootMargin: '0px 0px -24px 0px' },
     );
     targets().forEach((el) => io.observe(el));
-    const settle = () => settling.forEach((at, el) => {
-      const early = performance.now() - at < SETTLE;
-      if (gone(el) && early) { down(el); settling.delete(el); }
-      else if (!early) { settling.delete(el); if (gone(el)) down(el); else io.unobserve(el); }
-    });
+    const settle = () => all.forEach((el) => { if (!el.classList.contains('is-up') && !pending.has(el) && el.getBoundingClientRect().top < 0) place(el); });
     let queued = false;
     // Every scrolled frame also checks each closed sign against its own line. The observer alone is not enough:
     // a closed sign is clipped to nothing, so the browser never reports it moving further up the screen, and a
     // sign would otherwise only open when a safety net happened to run.
-    const all = targets();
     const onScroll = () => { if (!queued) { queued = true; requestAnimationFrame(() => {
       queued = false; settle();
       all.forEach((el) => { if (!el.classList.contains('is-up') && onScreen(el)) up(el); });
@@ -87,8 +83,7 @@ export function useSigns() {
     window.addEventListener('scroll', onScroll, { passive: true });
 
     // the safety net uses the same line as the observer, so it can never put a sign up early and steal the animation,
-    // and it only puts up signs that are on screen now: anything a fast scroll or a jump skipped past stays down
-    // and goes up as it is scrolled back to, instead of already standing there
+    // and it only puts up signs that are on screen now; what a jump skipped past is put in place by settle()
     const onScreen = (el: Element, at = line()) => { const r = el.getBoundingClientRect(); return r.top < window.innerHeight * at && r.bottom > 0; };
     const net = () => { settle(); targets().forEach((el) => { if (onScreen(el)) up(el); }); };
     // Once scrolling has stopped at the foot of the page, anything still below the line goes up, because there is
