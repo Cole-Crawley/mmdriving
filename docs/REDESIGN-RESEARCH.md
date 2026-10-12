@@ -299,7 +299,7 @@ Grade after this pass: **about 9 for experience, 7 for conversion.** The ceiling
 only the client can supply: prices and real reviews.
 
 Still open: a real test with learners and a parent; per-town pages for local search; the canonical address in
-`index.html` points at mmdriving.co.uk, which must be the real domain before launch.
+`index.html` pointed at mmdriving.co.uk, a domain that was never registered; at launch (12 Oct 2026) it was changed to the live address, mmdriving-snowy.vercel.app.
 
 Extra sources for this section: Uswitch survey via Newsweek (https://www.newsweek.com/gen-z-problem-telephobia-2032493),
 CNBC on phone anxiety (https://www.cnbc.com/2025/02/17/gen-z-are-taking-telephobia-courses-to-learn-the-lost-art-of-a-call.html),
