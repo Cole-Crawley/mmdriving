@@ -64,9 +64,9 @@ export function useSigns() {
     const down = (el: Element) => { (el as HTMLElement).style.transitionDelay = '0ms'; el.classList.remove('is-up'); };
     // Cole's scroll recording (12 Oct) showed things sitting blank for 0.3 to 1.3s while they waited for a line a
     // fifth (or half) of the way up the screen. Everything now starts once it is about 24px into view.
-    const line = (_el: Element) => 1 - 24 / window.innerHeight;
+    const line = () => 1 - 24 / window.innerHeight;
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting && e.boundingClientRect.top < window.innerHeight * line(e.target)) up(e.target); }),
+      (entries) => entries.forEach((e) => { if (e.isIntersecting && e.boundingClientRect.top < window.innerHeight * line()) up(e.target); }),
       { rootMargin: '0px 0px -24px 0px' },
     );
     targets().forEach((el) => io.observe(el));
@@ -89,7 +89,7 @@ export function useSigns() {
     // the safety net uses the same line as the observer, so it can never put a sign up early and steal the animation,
     // and it only puts up signs that are on screen now: anything a fast scroll or a jump skipped past stays down
     // and goes up as it is scrolled back to, instead of already standing there
-    const onScreen = (el: Element, at = line(el)) => { const r = el.getBoundingClientRect(); return r.top < window.innerHeight * at && r.bottom > 0; };
+    const onScreen = (el: Element, at = line()) => { const r = el.getBoundingClientRect(); return r.top < window.innerHeight * at && r.bottom > 0; };
     const net = () => { settle(); targets().forEach((el) => { if (onScreen(el)) up(el); }); };
     // Once scrolling has stopped at the foot of the page, anything still below the line goes up, because there is
     // no more scrolling to lift it and a sign must never stay down while it can be seen. Anywhere else a pause does
