@@ -16,7 +16,7 @@ export default function Lessons() {
           <p className="rise">Pick the one that sounds like you. If you are not sure, say so and we will work it out together.</p>
         </header>
 
-        <div className={`sign sign--white put-up ${styles.stack}`}>
+        <div className={`sign sign--white put-up paint ${styles.stack}`}>
           {LESSON_GROUPS.map((group) => (
             <div key={group.title} className={styles.group}>
               <h3 className={`${styles.groupTitle} rise`}>{group.title}</h3>

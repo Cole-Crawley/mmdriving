@@ -34,7 +34,7 @@ export function useSigns() {
       pending.clear();
       let inSign = 0;
       batch.forEach((el, k) => {
-        if (el.classList.contains('put-up')) {
+        if (el.classList.contains('put-up') && !el.classList.contains('paint')) {
           // a sign unrolls at the same steady pace whatever its size, so a tall one (the gantry) takes longer
           // instead of rushing: about 320px a second, between 1.2 and 2.6 seconds
           const dur = Math.min(2.6, Math.max(1.2, el.getBoundingClientRect().height / 320)).toFixed(2);
@@ -62,13 +62,12 @@ export function useSigns() {
       if (!flushing) { flushing = true; requestAnimationFrame(flush); window.setTimeout(flush, 100); }
     };
     const down = (el: Element) => { (el as HTMLElement).style.transitionDelay = '0ms'; el.classList.remove('is-up'); };
-    // A sign goes up once its top is a fifth of the way up the screen, so the movement is seen and not missed.
-    // A tall sign (over half a screen, like the gantry) waits until its top is just past the middle: opened any
-    // earlier, only a thin strip of it is on screen and it reads as a block appearing rather than a sign unrolling.
-    const line = (el: Element) => (el.classList.contains('put-up') && el.getBoundingClientRect().height > window.innerHeight * 0.5 ? 0.55 : 0.8);
+    // Cole's scroll recording (12 Oct) showed things sitting blank for 0.3 to 1.3s while they waited for a line a
+    // fifth (or half) of the way up the screen. Everything now starts as soon as it is a little way into view.
+    const line = (_el: Element) => 0.92;
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting && e.boundingClientRect.top < window.innerHeight * line(e.target)) up(e.target); }),
-      { rootMargin: '0px 0px -20% 0px' },
+      { rootMargin: '0px 0px -8% 0px' },
     );
     targets().forEach((el) => io.observe(el));
     const settle = () => settling.forEach((at, el) => {
@@ -79,7 +78,7 @@ export function useSigns() {
     let queued = false;
     // Every scrolled frame also checks each closed sign against its own line. The observer alone is not enough:
     // a closed sign is clipped to nothing, so the browser never reports it moving further up the screen, and a
-    // tall sign waiting for the middle would otherwise only open when a safety net happened to run.
+    // sign would otherwise only open when a safety net happened to run.
     const all = targets();
     const onScroll = () => { if (!queued) { queued = true; requestAnimationFrame(() => {
       queued = false; settle();
@@ -96,9 +95,7 @@ export function useSigns() {
     // no more scrolling to lift it and a sign must never stay down while it can be seen. Anywhere else a pause does
     // not put signs up early: they wait for the line, so the movement happens where the eye is.
     const atFoot = () => window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
-    // A tall sign that has stopped between the two lines (past a fifth of the way up, not yet past the middle)
-    // unrolls once scrolling stops, while it is being looked at, instead of leaving an empty space on screen.
-    const atRest = () => { settle(); const foot = atFoot(); targets().forEach((el) => { if (onScreen(el, 0.8) || (foot && !gone(el))) up(el); }); };
+    const atRest = () => { settle(); const foot = atFoot(); targets().forEach((el) => { if (onScreen(el) || (foot && !gone(el))) up(el); }); };
     let checks = 0;
     const timer = window.setInterval(() => { net(); if (++checks > 8) window.clearInterval(timer); }, 1200);
     let rest = 0;

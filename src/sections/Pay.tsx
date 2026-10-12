@@ -17,7 +17,7 @@ export default function Pay() {
           <p className="rise">The same prices in all six towns, with nothing added on. The 10-hour block costs the least per hour.</p>
         </header>
 
-        <div className={`sign sign--blue put-up ${styles.gantry}`}>
+        <div className={`sign sign--blue put-up paint ${styles.gantry}`}>
           {PAY_OPTIONS.map((o, i) => (
             <article key={o.id} className={`${styles.lane} ${o.recommended ? styles.best : ''} drop`}>
               {/* every lane keeps the same space at the top, so the three headings line up whether or not there is a tag */}

@@ -127,8 +127,14 @@ p { text-wrap: pretty; }
    Each starts once its top is a fifth of the way up the screen, so the whole movement happens in view. */
 /* signs uncover at a near-even pace (a gentle sine ease, never more than about 1.5 times the average speed): the
    steeper ease used before barely moved for the first second and then rushed, which read as the sign appearing */
-.js .put-up { transform: translateY(36px); clip-path: inset(0 0 100% 0 round var(--corner)); transition: clip-path 1.15s cubic-bezier(.37, 0, .63, 1), transform 1.15s cubic-bezier(.3, .6, .2, 1); will-change: clip-path, transform; }
+.js .put-up { transform: translateY(80px); clip-path: inset(0 0 100% 0 round var(--corner)); transition: clip-path 1.15s cubic-bezier(.37, 0, .63, 1), transform 1.15s cubic-bezier(.3, .6, .2, 1); will-change: clip-path, transform; }
 .js .put-up.is-up { transform: none; clip-path: inset(0 0 0 0 round var(--corner)); }
+/* The two wide signs (the lessons sign and the pay gantry) are painted on from left to right like the countdown
+   markers, sliding the last few pixels into place. They come into view at the foot of the screen, where a
+   top-down unroll only moves a thin strip and reads as the sign appearing; a sideways paint moves across the
+   whole width that is showing. */
+.js .put-up.paint { transform: translateX(-48px); clip-path: inset(0 100% 0 0 round var(--corner)); transition: clip-path 1.4s cubic-bezier(.45, 0, .15, 1), transform 1.4s cubic-bezier(.3, .6, .2, 1); }
+.js .put-up.paint.is-up { transform: none; clip-path: inset(0 0 0 0 round var(--corner)); }
 /* Rows, stops and headings are short, so a top-down wipe over their small height read as "it just appeared".
    They are painted on from left to right instead, like a road line, sliding the last few pixels into place:
    the wipe travels the full width of the row, so the movement is plain to see. */
