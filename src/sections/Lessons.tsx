@@ -12,17 +12,17 @@ export default function Lessons() {
     <section id="lessons" className="section wrap">
       <div className="grid">
         <header className="section-head">
-          <h2>Lessons for wherever you are starting from</h2>
-          <p>Pick the one that sounds like you. If you are not sure, say so and we will work it out together.</p>
+          <h2 className="rise">Lessons for wherever you are starting from</h2>
+          <p className="rise">Pick the one that sounds like you. If you are not sure, say so and we will work it out together.</p>
         </header>
 
         <div className={`sign sign--white put-up ${styles.stack}`}>
           {LESSON_GROUPS.map((group) => (
             <div key={group.title} className={styles.group}>
-              <h3 className={styles.groupTitle}>{group.title}</h3>
+              <h3 className={`${styles.groupTitle} rise`}>{group.title}</h3>
               <ul>
                 {group.lessons.map((lesson) => (
-                  <li key={lesson.name}>
+                  <li key={lesson.name} className="rise">
                     <a className={styles.row} href="#book" onClick={(e) => { e.preventDefault(); goTo('#book', lesson.value); }}>
                       <span className={styles.name}>{lesson.name}</span>
                       <span className={styles.body}>{lesson.body}</span>

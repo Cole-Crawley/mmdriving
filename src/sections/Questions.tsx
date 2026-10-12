@@ -10,8 +10,8 @@ export default function Questions() {
     <section id="questions" className="section wrap">
       <div className="grid">
         <div className={styles.head}>
-          <h2>Before you ask</h2>
-          <p className="lead">
+          <h2 className="rise">Before you ask</h2>
+          <p className="lead rise">
             The questions I hear most. If yours is not here, call or message me on{' '}
             <a className="link" href={BUSINESS.phoneHref}>{BUSINESS.phoneDisplay}</a>.
           </p>
@@ -19,7 +19,7 @@ export default function Questions() {
 
         <div className={styles.list}>
           {FAQS.map((f, i) => (
-            <details key={f.question} className={styles.item} name="questions" open={i === 0}>
+            <details key={f.question} className={`${styles.item} rise`} name="questions" open={i === 0}>
               <summary>
                 <span>{f.question}</span>
                 <span className={styles.sign} aria-hidden="true" />

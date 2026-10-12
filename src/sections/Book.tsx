@@ -115,7 +115,7 @@ export default function Book() {
     <section id="book" className="section wrap">
       <div className="grid">
         <div className={styles.side}>
-          <h2>Book a first lesson</h2>
+          <h2 className="rise">Book a first lesson</h2>
           <ol className={styles.steps}>
             <li className="rise" style={{ ['--i' as string]: 0 }}><Countdown bars={3} /><p><b>Send this form</b>, or message or call me. It takes about a minute.</p></li>
             <li className="rise" style={{ ['--i' as string]: 1 }}><Countdown bars={2} /><p><b>I get back to you</b> {reply} for a quick chat about where you are starting from.</p></li>
@@ -142,7 +142,7 @@ export default function Book() {
             <div ref={done} className={styles.done} tabIndex={-1} role="status">
               <span className={styles.tick} aria-hidden="true" />
               <h3>Sent. Thank you{first ? `, ${first}` : ''}.</h3>
-              <p className="lead">I will call or text you on {form.phone.trim()} {reply}.</p>
+              <p className="lead rise">I will call or text you on {form.phone.trim()} {reply}.</p>
               <p>Nothing to pay and nothing to do until then. If you would rather not wait, call me on <a className="link" href={BUSINESS.phoneHref}>{BUSINESS.phoneDisplay}</a>.</p>
               <button className="btn btn--plain" type="button" onClick={() => { setForm(EMPTY); setPicked(''); setStatus('idle'); }}>Send another enquiry</button>
             </div>
