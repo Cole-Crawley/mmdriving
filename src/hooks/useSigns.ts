@@ -12,7 +12,7 @@ export function useSigns() {
     root.classList.add('js');
     (window as unknown as { __signs?: number }).__signs = 1;
 
-    const targets = () => Array.from(document.querySelectorAll<HTMLElement>('.put-up, .rise, .drop'));
+    const targets = () => Array.from(document.querySelectorAll<HTMLElement>('.put-up, .rise'));
     // Every sign goes up once, on the way down, and then stays up for good (Cole, 12 Oct: replaying on the way back up
     // was too much). Anything that comes into view from the top of the screen instead (scrolling back up, or after a
     // jump down the page) is simply there: it is put up with its movement switched off for a moment.
@@ -39,7 +39,7 @@ export function useSigns() {
           const dur = Math.min(2.6, Math.max(1.2, el.getBoundingClientRect().height / 320)).toFixed(2);
           el.style.transitionDuration = `${dur}s, ${dur}s`;
         }
-        // rows and lanes that open with their sign wait until it is about half open, then follow one by one
+        // anything that opens with its sign waits until the sign is about half open, then follows one by one
         el.style.transitionDelay = withSign.has(el) ? `${450 + Math.min(inSign++, 4) * 180}ms` : `${Math.min(k, 4) * 120}ms`;
         withSign.delete(el);
         el.classList.add('is-up');
@@ -53,9 +53,9 @@ export function useSigns() {
       const sign = h.parentElement?.closest('.put-up');
       if (sign && !sign.classList.contains('is-up') && !pending.has(sign as HTMLElement)) return;
       pending.add(h);
-      // Rows and lanes inside a sign count as hidden to the browser while the sign is still closed, so they would
+      // Anything animated inside a sign counts as hidden to the browser while the sign is still closed, so they would
       // only be told to go up at the next scroll. They go up with their sign instead, straight after it in order.
-      if (h.classList.contains('put-up')) h.querySelectorAll('.rise, .drop').forEach((c) => { if (onScreen(c) && !c.classList.contains('is-up')) { withSign.add(c); up(c); } });
+      if (h.classList.contains('put-up')) h.querySelectorAll('.rise').forEach((c) => { if (onScreen(c) && !c.classList.contains('is-up')) { withSign.add(c); up(c); } });
       // the next frame, or a tenth of a second if frames are paused (a tab in the background), whichever is first
       if (!flushing) { flushing = true; requestAnimationFrame(flush); window.setTimeout(flush, 100); }
     };

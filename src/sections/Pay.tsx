@@ -13,13 +13,13 @@ export default function Pay() {
     <section id="pay" className="section wrap">
       <div className="grid">
         <header className="section-head">
-          <h2 className="rise">Three ways to pay. Pick a lane.</h2>
-          <p className="rise">The same prices in all six towns, with nothing added on. The 10-hour block costs the least per hour.</p>
+          <h2>Three ways to pay. Pick a lane.</h2>
+          <p>The same prices in all six towns, with nothing added on. The 10-hour block costs the least per hour.</p>
         </header>
 
         <div className={`sign sign--blue put-up paint ${styles.gantry}`}>
           {PAY_OPTIONS.map((o, i) => (
-            <article key={o.id} className={`${styles.lane} ${o.recommended ? styles.best : ''} drop`}>
+            <article key={o.id} className={`${styles.lane} ${o.recommended ? styles.best : ''}`}>
               {/* every lane keeps the same space at the top, so the three headings line up whether or not there is a tag */}
               <p className={styles.tagRow}>{o.recommended && <span className={styles.tag}>Best value</span>}</p>
               <h3 className={styles.name}>{o.name.split(' ').map((word) => <span key={word}>{word} </span>)}</h3>
@@ -32,19 +32,19 @@ export default function Pay() {
               <a className={`btn ${o.recommended ? '' : 'btn--plain'} ${styles.ask}`} href="#book" onClick={(e) => ask(e, o.value)}>
                 Choose this
               </a>
-              <Arrow turn={180} className={`${styles.down} rise`} />
+              <Arrow turn={180} className={styles.down} />
               <span className="vh">Lane {i + 1} of {PAY_OPTIONS.length}</span>
             </article>
           ))}
         </div>
 
         <div className={styles.extra}>
-          <div className={`${styles.testDay} rise`}>
+          <div className={styles.testDay}>
             <h3>{TEST_DAY.name}, {TEST_DAY.price}</h3>
             <p>{TEST_DAY.body}</p>
             <a className="link" href="#book" onClick={(e) => ask(e, TEST_DAY.value)}>Ask about a test-day lesson</a>
           </div>
-          <div className={`${styles.cancel} rise`}>
+          <div className={styles.cancel}>
             <h3>If you need to cancel</h3>
             <p>{CANCELLATION}</p>
           </div>

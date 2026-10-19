@@ -10,8 +10,8 @@ export default function RoadToPass() {
     <section id="road" className="section wrap">
       <div className="grid">
         <header className="section-head">
-          <h2 className="rise">The road from provisional licence to passed</h2>
-          <p className="rise">Five stops. The yellow ones are with me. The others are yours to do, and I will point you the right way.</p>
+          <h2>The road from provisional licence to passed</h2>
+          <p>Five stops. The yellow ones are with me. The others are yours to do, and I will point you the right way.</p>
         </header>
 
         <ol className={styles.road}>

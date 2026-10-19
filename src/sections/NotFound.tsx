@@ -13,7 +13,7 @@ export default function NotFound() {
         </svg>
         <div>
           <h1 className={styles.title}>No through road</h1>
-          <p className="lead rise">That page does not exist. The address may have a typo, or the page may have moved.</p>
+          <p className="lead">That page does not exist. The address may have a typo, or the page may have moved.</p>
           <div className={styles.actions}>
             <a className="btn btn--flag" href="/">Back to the start</a>
             <a className={styles.call} href={BUSINESS.phoneHref}>or call <b>{BUSINESS.phoneDisplay}</b></a>
